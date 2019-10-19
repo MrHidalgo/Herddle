@@ -1,0 +1,58 @@
+// COMMON :: START
+
+// form
+.form {
+  &-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 33px;
+  }
+
+  &-control {
+    outline: none;
+    width: 100%;
+    max-width: 327px;
+    height: 53px;
+    border-radius: 3px;
+    background-color: rgba(#fff, 0.6);
+    border: 1px solid rgba(#002a36, 0.6);
+    box-shadow: none;
+    padding-left: 26px;
+    padding-right: 26px;
+    font-size: 16px;
+    color: rgba(#002a36, 1);
+    @include inputPlaceholder {
+      color: rgba(#002a36, 0.5);
+      font-size: 16px;
+    }
+
+    &:focus,
+    &:hover {
+      box-shadow: none;
+      border: 1px solid rgba(#002a36, 0.6);
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    width: 100%;
+    max-width: calc((100% - 38px) / 2);
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 9px;
+    font-weight: normal;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #002a36;
+  }
+}
+// form :: end
+
+// COMMON :: END

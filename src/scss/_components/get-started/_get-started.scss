@@ -1,0 +1,74 @@
+// SECTION Get Started :: START
+
+.get-started {
+  position: relative;
+
+  &__header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 50px;
+    padding-left: 70px;
+    padding-right: 70px;
+
+    .c-link {
+      margin-right: 25px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    min-height: 100vh;
+
+    &-left,
+    &-right {
+      min-height: 100%;
+    }
+
+    &-left {
+      width: 100%;
+      max-width: 39%;
+      background-color: #001d25;
+      background-image: url('../img/img-get-started-bg.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: top center;
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      min-width: 1px;
+      padding: 120px 15px;
+    }
+  }
+
+  &__row {
+    width: 100%;
+    max-width: 694px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__title {
+    padding-bottom: 40px;
+  }
+
+  &__subtitle {
+    padding-bottom: 47px;
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 242px;
+    margin-top: 6px;
+  }
+}
+
+// SECTION Get Started :: END

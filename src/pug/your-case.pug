@@ -1,0 +1,11 @@
+---
+title: Herddle | We're on your case
+
+pageClassName: p-your-case
+---
+extends shared/_layout
+
+block content
+  div.body.body--start(class!= pageClassName)
+
+    include components/get-started/_get-started-case

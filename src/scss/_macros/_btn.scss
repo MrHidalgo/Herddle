@@ -1,0 +1,127 @@
+// BUTTON :: START
+
+// ==================================================
+// ==================================================
+// ==================================================
+
+$bth-width: 250px;
+$bth-height: 45px;
+$btn-border-width: 1px;
+$btn-border-color: rgba(#000, 1);
+$bth-border-radius: 3px;
+$bth-box-shadow: none;
+$bth-background-color: rgba(#000, 1);
+$bth-color: rgba(#fff, 1);
+$bth-font-size: rgba(#000, 1);
+$bth-font-weight: bold;
+
+$btn-color--border: rgba(#000, 1);
+
+// ==================================================
+// ==================================================
+// ==================================================
+
+.c-btn {
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  //width: 100%;
+  //max-width: $bth-width;
+  //height: $bth-height;
+  border: none;
+  box-shadow: none;
+  border-radius: $bth-border-radius;
+  color: $bth-color;
+  text-align: center;
+  //font-size: $bth-font-size;
+  //font-weight: $bth-font-weight;
+
+  &:hover {
+    color: $bth-color;
+
+    &:after {
+      opacity: 1.0;
+      visibility: visible;
+      transform: translateX(-50%) translateY(-50%) scale(1);
+      transform-origin: center center;
+      transition: all 0.5s cubic-bezier(0, 0.9, 0.5, 1);
+    }
+  }
+
+  &:after {
+    content: '';
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: calc(100% + 30px);
+    border-radius: 100%;
+    padding: calc(40% + 30px) 0;
+    transform: translateX(-50%) translateY(-50%) scale(0.001);
+    transform-origin: center center;
+    transition: all 0.5s cubic-bezier(0, 0.9, 0.5, 1);
+  }
+
+  span {
+    z-index: 2;
+    position: relative;
+  }
+
+  &__wrapper {
+    display: flex;
+
+    &Inline {
+      display: inline-flex;
+    }
+  }
+
+  &--big {
+    height: 53px;
+    font-weight: 500;
+    font-size: 17px;
+  }
+
+  &--small {
+    height: 35px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  &--bg {
+    &--irisBlue {
+      background: #00abdb;
+
+      &:after {
+        background-color: lighten(#00abdb, 7%);
+      }
+    }
+
+    &--blackPearl {
+      background: #002a36;
+
+      &:after {
+        background-color: lighten(#002a36, 7%);
+      }
+    }
+  }
+
+  &__text {
+    &-wrap {}
+  }
+
+  &__icon {
+    &-wrap {}
+  }
+}
+
+// BUTTON :: END

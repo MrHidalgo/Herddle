@@ -1,0 +1,75 @@
+// SECTION Get Started :: START
+
+section#get-started.get-started
+
+  .get-started__header
+    div
+
+      .logo.logo--getStarted
+        a.logo__link(href='/' title='')
+          img.logo__img(src='img/logo.svg')
+
+    div
+
+      a.get-started__link.c-link(href='#' title='') Already have an account?
+      .c-btn__wrapperInline
+        a.get-started__btn.c-btn.c-btn--bg.c-btn--small.c-btn--bg--blackPearl(href='#' title='')
+          span log in
+
+  .get-started__wrapper
+    .get-started__wrapper-left
+    .get-started__wrapper-right
+
+      .get-started__row
+
+        h1.get-started__title.c-title Get Started
+        p.get-started__subtitle.c-subtitle We made it easy as pie to manage your properties and lettings. The property management tool you’ve always dreamed of, powered by smart technology and dedicated humans.
+
+        form.get-started__form(action='' method='' autocomplete='off')
+
+          .form__row
+            .form__col.form__col-1
+              .form-group
+                label.form__label(for='getStartedInput1') FIRST NAME
+                input#getStartedInput1.form-control(type='text', placeholder='')
+
+            .form__col.form__col-2
+              .form-group
+                label.form__label(for='getStartedInput2') LAST NAME
+                input#getStartedInput2.form-control(type='text', placeholder='')
+
+          .form__row
+            .form__col.form__col-1
+              .form-group
+                label.form__label(for='getStartedInput4') What describes you best?
+                  select#getStartedInput4.form-control
+                    option(selected disabled) Please select
+                    option 1
+                    option 2
+                    option 3
+
+            .form__col.form__col-2
+              .form-group
+                label.form__label(for='getStartedInput3') FIRST NAME
+                input#getStartedInput3.form-control(type='text', placeholder='')
+
+          .form__row
+            .form__col.form__col-1
+              .form-group
+                label.form__label(for='getStartedInput5') Company (optional)
+                input#getStartedInput5.form-control(type='text', placeholder='')
+
+            .form__col.form__col-2
+              .form-group
+                label.form__label(for='getStartedInput6') How did you hear about us?
+                select#getStartedInput6.form-control
+                  option(selected disabled) Please select
+                  option 1
+                  option 2
+                  option 3
+
+          .c-btn__wrapper
+            button.get-started__btn.c-btn.c-btn--big.c-btn--bg--irisBlue(type='submit')
+              span Request Access
+
+// SECTION Get Started :: END

@@ -1,0 +1,22 @@
+// SUBTITLE :: START
+
+.c-subtitle {
+  position: relative;
+  padding-left: 68px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 28px;
+  color: #002a36;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 0;
+    width: 46px;
+    height: 2px;
+    background-color: #000000;
+  }
+}
+
+// SUBTITLE :: END

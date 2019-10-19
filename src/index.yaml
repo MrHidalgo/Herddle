@@ -1,0 +1,27 @@
+ProjectTitle: Herddle
+
+PageList:
+- file: index.html
+  titleName: Home
+  ready: 1
+- file: get-started.html
+  titleName: Get Started
+  ready: 55
+- file: your-case.html
+  titleName: Your case
+  ready: 55
+- file: your-career.html
+  titleName: Your Career
+  ready: 1
+- file: humans.html
+  titleName: Humans
+  ready: 1
+- file: build.html
+  titleName: Build
+  ready: 1
+- file: manager.html
+  titleName: Customer Success Manager
+  ready: 1
+- file: contact-us.html
+  titleName: Contact Us
+  ready: 1
