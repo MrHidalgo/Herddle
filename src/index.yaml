@@ -10,9 +10,6 @@ PageList:
 - file: your-case.html
   titleName: We're on your case
   ready: 90
-- file: your-career.html
-  titleName: Your Career
-  ready: 1
 - file: humans.html
   titleName: Prop-tech company
   ready: 75
