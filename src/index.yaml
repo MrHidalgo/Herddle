@@ -8,16 +8,19 @@ PageList:
   titleName: Get Started
   ready: 90
 - file: your-case.html
-  titleName: Your case
+  titleName: We're on your case
   ready: 90
 - file: your-career.html
   titleName: Your Career
   ready: 1
 - file: humans.html
-  titleName: Humans
+  titleName: Prop-tech company
   ready: 1
+- file: most.html
+  titleName: Most Meaningful Work
+  ready: 75
 - file: build.html
-  titleName: Build
+  titleName: Built and designed
   ready: 1
 - file: manager.html
   titleName: Customer Success Manager

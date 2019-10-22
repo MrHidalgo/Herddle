@@ -1,0 +1,118 @@
+// SECTION most main :: START
+
+.most-main {
+  padding-top: 172px;
+  padding-bottom: 70px;
+  @include adaptive(1279) {
+    padding-top: 132px;
+  }
+  @include adaptive(767) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+    max-width: 1560px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    @include adaptive(767) {
+      flex-direction: column-reverse;
+    }
+
+    &-left,
+    &-right {
+      width: 50%;
+      @include adaptive(767) {
+        width: 100%;
+      }
+    }
+
+    &-left {
+      position: relative;
+    }
+
+    &-right {
+      padding-top: 120px;
+      padding-left: 95px;
+      @include adaptive(1279) {
+        padding-top: 90px;
+        padding-left: 55px;
+      }
+      @include adaptive(1023) {
+        padding-top: 90px;
+        padding-left: 30px;
+      }
+      @include adaptive(767) {
+        padding-top: 0;
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__img {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    max-width: 776px;
+    height: 660px;
+    @include adaptive(767) {
+      height: 500px;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+        @include transition(transform 0.75s);
+      }
+    }
+
+    img {
+      @extend %imageResCoverAbs;
+      backface-visibility: hidden;
+      transform-origin: center;
+      @include transition(transform);
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: 70px;
+    left: 208px;
+    width: 776px;
+    height: 660px;
+    background-color: rgba(#00c4de, 0.08);
+    @include adaptive(1439) {
+      left: 108px;
+    }
+    @include adaptive(1279) {
+      left: 58px;
+      width: 576px;
+    }
+    @include adaptive(767) {
+      left: 50px;
+      width: calc(100% - 35px);
+      height: 500px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 55px;
+    @include adaptive(767) {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__subtitle {
+    width: 100%;
+    max-width: 520px;
+    padding-bottom: 30px;
+  }
+}
+
+// SECTION most main :: END

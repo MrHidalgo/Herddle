@@ -1,0 +1,14 @@
+---
+title: Herddle | Most Meaningful Work
+
+pageClassName: p-most
+---
+extends shared/_layout
+
+block content
+  div.body.body--start(class!= pageClassName)
+
+    include components/most/_main
+
+    include components/common/_navigation
+    include components/common/_review
