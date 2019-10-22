@@ -46,8 +46,7 @@
   
   &__item {
     position: relative;
-    width: 100%;
-    max-width: calc(100% / 5);
+    padding-right: 60px;
     font-weight: 500;
     font-size: 31px;
     @extend %fontBigCaslon;
@@ -55,7 +54,7 @@
       font-size: 27px;
     }
     @include adaptive(1023) {
-      max-width: calc(100% / 3);
+      padding-right: 30px;
       margin-bottom: 15px;
     }
     @include adaptive(767) {

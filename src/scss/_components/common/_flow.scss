@@ -1,0 +1,99 @@
+// SECTION flow :: START
+
+.flow {
+  padding-top: 150px;
+  padding-bottom: 180px;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1160px;
+    height: 591px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('../img/img-flow-bg.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    @include adaptive(1365) {
+      height: 551px;
+    }
+    @include adaptive(767) {
+      height: auto;
+    }
+
+    &-left,
+    &-right {
+      width: 50%;
+      min-height: 100%;
+      @include adaptive(767) {
+        width: 100%;
+      }
+    }
+
+    &-left {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #001d25;
+      @include adaptive(1023) {
+        padding: 50px 30px;
+      }
+      @include adaptive(767) {
+        padding-top: 75px;
+        padding-bottom: 75px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: -44px;
+        left: 49px;
+        width: 1px;
+        height: 95px;
+        background-color: #b5b5b5;
+      }
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include adaptive(767) {
+        height: 200px;
+      }
+    }
+  }
+
+  &__title {
+    width: 100%;
+    max-width: 393px;
+    font-weight: 500;
+    font-size: 70px;
+    line-height: 1.2;
+    color: #fff;
+    @extend %fontBigCaslon;
+    @include adaptive(1365) {
+      font-size: 60px;
+    }
+    @include adaptive(1023) {
+      font-size: 50px;
+    }
+    @include adaptive(767) {
+      font-size: 45px;
+    }
+  }
+
+  .c-btn__wrapper {
+    width: 100%;
+    max-width: 242px;
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}
+
+// SECTION flow :: END

@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 6, src/scss/_utilities/_extend.scss */
-.c-title, .navigation__link-title, .review__text, .description__text, .description__item {
+.c-title, .navigation__link-title, .review__text, .flow__title, .description__text, .description__item {
   font-family: 'BigCaslon', 'ProximaNova', sans-serif;
 }
 
@@ -1663,6 +1663,169 @@ picture {
   max-width: 242px;
 }
 
+/* line 3, src/scss/_components/common/_flow.scss */
+.flow {
+  padding-top: 150px;
+  padding-bottom: 180px;
+}
+
+/* line 7, src/scss/_components/common/_flow.scss */
+.flow__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 100%;
+  max-width: 1160px;
+  height: 591px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../img/img-flow-bg.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  -webkit-background-size: cover;
+          background-size: cover;
+}
+
+@media screen and (max-width: 1365px) {
+  /* line 7, src/scss/_components/common/_flow.scss */
+  .flow__wrapper {
+    height: 551px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 7, src/scss/_components/common/_flow.scss */
+  .flow__wrapper {
+    height: auto;
+  }
+}
+
+/* line 27, src/scss/_components/common/_flow.scss */
+.flow__wrapper-left, .flow__wrapper-right {
+  width: 50%;
+  min-height: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 27, src/scss/_components/common/_flow.scss */
+  .flow__wrapper-left, .flow__wrapper-right {
+    width: 100%;
+  }
+}
+
+/* line 36, src/scss/_components/common/_flow.scss */
+.flow__wrapper-left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #001d25;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 36, src/scss/_components/common/_flow.scss */
+  .flow__wrapper-left {
+    padding: 50px 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 36, src/scss/_components/common/_flow.scss */
+  .flow__wrapper-left {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+}
+
+/* line 49, src/scss/_components/common/_flow.scss */
+.flow__wrapper-left:before {
+  content: '';
+  position: absolute;
+  top: -44px;
+  left: 49px;
+  width: 1px;
+  height: 95px;
+  background-color: #b5b5b5;
+}
+
+/* line 60, src/scss/_components/common/_flow.scss */
+.flow__wrapper-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 60, src/scss/_components/common/_flow.scss */
+  .flow__wrapper-right {
+    height: 200px;
+  }
+}
+
+/* line 70, src/scss/_components/common/_flow.scss */
+.flow__title {
+  width: 100%;
+  max-width: 393px;
+  font-weight: 500;
+  font-size: 70px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+@media screen and (max-width: 1365px) {
+  /* line 70, src/scss/_components/common/_flow.scss */
+  .flow__title {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 70, src/scss/_components/common/_flow.scss */
+  .flow__title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 70, src/scss/_components/common/_flow.scss */
+  .flow__title {
+    font-size: 45px;
+  }
+}
+
+/* line 89, src/scss/_components/common/_flow.scss */
+.flow .c-btn__wrapper {
+  width: 100%;
+  max-width: 242px;
+}
+
+/* line 94, src/scss/_components/common/_flow.scss */
+.flow__btn {
+  width: 100%;
+}
+
 /* line 3, src/scss/_components/get-started/_get-started.scss */
 .get-started {
   position: relative;
@@ -2714,9 +2877,7 @@ picture {
 /* line 47, src/scss/_components/humans/_description.scss */
 .description__item {
   position: relative;
-  width: 100%;
-  max-width: -webkit-calc(100% / 5);
-  max-width: calc(100% / 5);
+  padding-right: 60px;
   font-weight: 500;
   font-size: 31px;
 }
@@ -2731,8 +2892,7 @@ picture {
 @media screen and (max-width: 1023px) {
   /* line 47, src/scss/_components/humans/_description.scss */
   .description__item {
-    max-width: -webkit-calc(100% / 3);
-    max-width: calc(100% / 3);
+    padding-right: 30px;
     margin-bottom: 15px;
   }
 }
@@ -2745,7 +2905,7 @@ picture {
   }
 }
 
-/* line 66, src/scss/_components/humans/_description.scss */
+/* line 65, src/scss/_components/humans/_description.scss */
 .description__item:before {
   z-index: -1;
   content: '';
