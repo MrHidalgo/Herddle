@@ -578,6 +578,13 @@ picture {
   }
 }
 
+@media screen and (max-width: 575px) {
+  /* line 3, src/scss/_macros/_title.scss */
+  .c-title {
+    font-size: 45px;
+  }
+}
+
 /* line 3, src/scss/_macros/_subtitle.scss */
 .c-subtitle {
   position: relative;
@@ -639,6 +646,8 @@ picture {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-left: 15px;
+  padding-right: 15px;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -648,12 +657,12 @@ picture {
   text-align: center;
 }
 
-/* line 43, src/scss/_macros/_btn.scss */
+/* line 45, src/scss/_macros/_btn.scss */
 .c-btn:hover {
   color: white;
 }
 
-/* line 46, src/scss/_macros/_btn.scss */
+/* line 48, src/scss/_macros/_btn.scss */
 .c-btn:hover:after {
   opacity: 1.0;
   visibility: visible;
@@ -668,7 +677,7 @@ picture {
   transition: all 0.5s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 55, src/scss/_macros/_btn.scss */
+/* line 57, src/scss/_macros/_btn.scss */
 .c-btn:after {
   content: '';
   opacity: 0;
@@ -694,13 +703,13 @@ picture {
   transition: all 0.5s cubic-bezier(0, 0.9, 0.5, 1);
 }
 
-/* line 71, src/scss/_macros/_btn.scss */
+/* line 73, src/scss/_macros/_btn.scss */
 .c-btn span {
   z-index: 2;
   position: relative;
 }
 
-/* line 76, src/scss/_macros/_btn.scss */
+/* line 78, src/scss/_macros/_btn.scss */
 .c-btn__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -708,7 +717,7 @@ picture {
   display: flex;
 }
 
-/* line 79, src/scss/_macros/_btn.scss */
+/* line 81, src/scss/_macros/_btn.scss */
 .c-btn__wrapperInline {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -716,14 +725,14 @@ picture {
   display: inline-flex;
 }
 
-/* line 84, src/scss/_macros/_btn.scss */
+/* line 86, src/scss/_macros/_btn.scss */
 .c-btn--big {
   height: 53px;
   font-weight: 500;
   font-size: 17px;
 }
 
-/* line 90, src/scss/_macros/_btn.scss */
+/* line 92, src/scss/_macros/_btn.scss */
 .c-btn--small {
   height: 35px;
   padding-left: 30px;
@@ -735,7 +744,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 90, src/scss/_macros/_btn.scss */
+  /* line 92, src/scss/_macros/_btn.scss */
   .c-btn--small {
     padding-left: 10px;
     padding-right: 10px;
@@ -743,22 +752,22 @@ picture {
   }
 }
 
-/* line 106, src/scss/_macros/_btn.scss */
+/* line 108, src/scss/_macros/_btn.scss */
 .c-btn--bg--irisBlue {
   background: #00abdb;
 }
 
-/* line 109, src/scss/_macros/_btn.scss */
+/* line 111, src/scss/_macros/_btn.scss */
 .c-btn--bg--irisBlue:after {
   background-color: #00c7ff;
 }
 
-/* line 114, src/scss/_macros/_btn.scss */
+/* line 116, src/scss/_macros/_btn.scss */
 .c-btn--bg--blackPearl {
   background: #002a36;
 }
 
-/* line 117, src/scss/_macros/_btn.scss */
+/* line 119, src/scss/_macros/_btn.scss */
 .c-btn--bg--blackPearl:after {
   background-color: #00465a;
 }
@@ -1425,38 +1434,179 @@ picture {
   }
 }
 
+/* line 3, src/scss/_components/manager/_main.scss */
+.manager-main {
+  overflow: hidden;
+  position: relative;
+  padding-top: 248px;
+}
+
+@media screen and (max-width: 1365px) {
+  /* line 3, src/scss/_components/manager/_main.scss */
+  .manager-main {
+    padding-top: 200px;
+  }
+}
+
+/* line 11, src/scss/_components/manager/_main.scss */
+.manager-main__bg {
+  position: absolute;
+  top: 180px;
+  left: 282px;
+  width: 574px;
+  height: 422px;
+  background-color: #eafafc;
+}
+
+@media screen and (max-width: 1524px) {
+  /* line 11, src/scss/_components/manager/_main.scss */
+  .manager-main__bg {
+    left: 15px;
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  /* line 11, src/scss/_components/manager/_main.scss */
+  .manager-main__bg {
+    top: 132px;
+  }
+}
+
+/* line 26, src/scss/_components/manager/_main.scss */
+.manager-main__wrapper {
+  z-index: 0;
+  position: relative;
+  padding-left: 100px;
+}
+
+@media screen and (max-width: 1365px) {
+  /* line 26, src/scss/_components/manager/_main.scss */
+  .manager-main__wrapper {
+    padding-left: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 26, src/scss/_components/manager/_main.scss */
+  .manager-main__wrapper {
+    padding-left: 0;
+  }
+}
+
+/* line 38, src/scss/_components/manager/_main.scss */
+.manager-main__title {
+  padding-bottom: 64px;
+}
+
+/* line 42, src/scss/_components/manager/_main.scss */
+.manager-main__desc {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* line 45, src/scss/_components/manager/_main.scss */
+.manager-main__desc > div {
+  width: 100%;
+}
+
+/* line 48, src/scss/_components/manager/_main.scss */
+.manager-main__desc > div:nth-of-type(1) {
+  max-width: 98px;
+  padding-top: 12px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 48, src/scss/_components/manager/_main.scss */
+  .manager-main__desc > div:nth-of-type(1) {
+    width: 50px;
+  }
+}
+
+/* line 55, src/scss/_components/manager/_main.scss */
+.manager-main__desc > div:nth-of-type(2) {
+  max-width: 655px;
+}
+
+/* line 60, src/scss/_components/manager/_main.scss */
+.manager-main__desc-line {
+  width: 46px;
+  height: 2px;
+  background-color: #002a36;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 60, src/scss/_components/manager/_main.scss */
+  .manager-main__desc-line {
+    width: 30px;
+  }
+}
+
+/* line 69, src/scss/_components/manager/_main.scss */
+.manager-main__desc-title, .manager-main__desc-text {
+  padding-bottom: 30px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 69, src/scss/_components/manager/_main.scss */
+  .manager-main__desc-title, .manager-main__desc-text {
+    font-size: 16px;
+  }
+}
+
+/* line 79, src/scss/_components/manager/_main.scss */
+.manager-main__desc-title {
+  font-weight: bold;
+}
+
+/* line 84, src/scss/_components/manager/_main.scss */
+.manager-main__desc-text:last-of-type {
+  padding-bottom: 67px;
+}
+
+/* line 89, src/scss/_components/manager/_main.scss */
+.manager-main__desc-btn {
+  width: 100%;
+  max-width: 255px;
+  margin-left: auto;
+}
+
 /* line 3, src/scss/_components/get-started/_get-started.scss */
 .get-started {
   position: relative;
 }
 
-/* line 8, src/scss/_components/get-started/_get-started.scss */
-.get-started--case .get-started__header {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+@media screen and (max-width: 767px) {
+  /* line 8, src/scss/_components/get-started/_get-started.scss */
+  .get-started--case .get-started__header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  /* line 16, src/scss/_components/get-started/_get-started.scss */
+  .get-started--case .get-started__header > div:nth-of-type(1) {
+    padding-bottom: 30px;
+  }
 }
 
-/* line 15, src/scss/_components/get-started/_get-started.scss */
-.get-started--case .get-started__header > div:nth-of-type(1) {
-  padding-bottom: 30px;
-}
-
-/* line 23, src/scss/_components/get-started/_get-started.scss */
+/* line 25, src/scss/_components/get-started/_get-started.scss */
 .get-started__header {
   position: absolute;
   top: 0;
@@ -1479,23 +1629,23 @@ picture {
   padding-right: 70px;
 }
 
-@media screen and (max-width: 1023px) {
-  /* line 23, src/scss/_components/get-started/_get-started.scss */
-  .get-started__header {
-    padding-top: 30px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  /* line 23, src/scss/_components/get-started/_get-started.scss */
+@media screen and (max-width: 1279px) {
+  /* line 25, src/scss/_components/get-started/_get-started.scss */
   .get-started__header {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 
+@media screen and (max-width: 1023px) {
+  /* line 25, src/scss/_components/get-started/_get-started.scss */
+  .get-started__header {
+    padding-top: 30px;
+  }
+}
+
 @media screen and (max-width: 767px) {
-  /* line 43, src/scss/_components/get-started/_get-started.scss */
+  /* line 45, src/scss/_components/get-started/_get-started.scss */
   .get-started__header > div:nth-of-type(2) {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1513,19 +1663,19 @@ picture {
   }
 }
 
-/* line 52, src/scss/_components/get-started/_get-started.scss */
+/* line 54, src/scss/_components/get-started/_get-started.scss */
 .get-started__header .c-link {
   margin-right: 25px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 52, src/scss/_components/get-started/_get-started.scss */
+  /* line 54, src/scss/_components/get-started/_get-started.scss */
   .get-started__header .c-link {
     margin-right: 0;
   }
 }
 
-/* line 60, src/scss/_components/get-started/_get-started.scss */
+/* line 62, src/scss/_components/get-started/_get-started.scss */
 .get-started__wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1534,12 +1684,12 @@ picture {
   min-height: 100vh;
 }
 
-/* line 64, src/scss/_components/get-started/_get-started.scss */
+/* line 66, src/scss/_components/get-started/_get-started.scss */
 .get-started__wrapper-left, .get-started__wrapper-right {
   min-height: 100%;
 }
 
-/* line 69, src/scss/_components/get-started/_get-started.scss */
+/* line 71, src/scss/_components/get-started/_get-started.scss */
 .get-started__wrapper-left {
   width: 100%;
   max-width: 39%;
@@ -1552,13 +1702,13 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 69, src/scss/_components/get-started/_get-started.scss */
+  /* line 71, src/scss/_components/get-started/_get-started.scss */
   .get-started__wrapper-left {
     display: none;
   }
 }
 
-/* line 82, src/scss/_components/get-started/_get-started.scss */
+/* line 84, src/scss/_components/get-started/_get-started.scss */
 .get-started__wrapper-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1581,20 +1731,20 @@ picture {
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 82, src/scss/_components/get-started/_get-started.scss */
+  /* line 84, src/scss/_components/get-started/_get-started.scss */
   .get-started__wrapper-right {
     padding-bottom: 50px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 82, src/scss/_components/get-started/_get-started.scss */
+  /* line 84, src/scss/_components/get-started/_get-started.scss */
   .get-started__wrapper-right {
     padding-top: 150px;
   }
 }
 
-/* line 98, src/scss/_components/get-started/_get-started.scss */
+/* line 100, src/scss/_components/get-started/_get-started.scss */
 .get-started__row {
   width: 100%;
   max-width: 694px;
@@ -1602,24 +1752,24 @@ picture {
   margin-right: auto;
 }
 
-/* line 105, src/scss/_components/get-started/_get-started.scss */
+/* line 107, src/scss/_components/get-started/_get-started.scss */
 .get-started__title {
   padding-bottom: 40px;
 }
 
 @media screen and (max-width: 767px) {
-  /* line 105, src/scss/_components/get-started/_get-started.scss */
+  /* line 107, src/scss/_components/get-started/_get-started.scss */
   .get-started__title {
     text-align: center;
   }
 }
 
-/* line 112, src/scss/_components/get-started/_get-started.scss */
+/* line 114, src/scss/_components/get-started/_get-started.scss */
 .get-started__subtitle {
   padding-bottom: 47px;
 }
 
-/* line 116, src/scss/_components/get-started/_get-started.scss */
+/* line 118, src/scss/_components/get-started/_get-started.scss */
 .get-started__submit {
   width: 100%;
   max-width: 242px;
@@ -1627,7 +1777,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 116, src/scss/_components/get-started/_get-started.scss */
+  /* line 118, src/scss/_components/get-started/_get-started.scss */
   .get-started__submit {
     margin-top: 0;
     margin-left: auto;

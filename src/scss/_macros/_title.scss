@@ -14,6 +14,9 @@
   @include adaptive(767) {
     font-size: 50px;
   }
+  @include adaptive(575) {
+    font-size: 45px;
+  }
 }
 
 // TITLE :: END

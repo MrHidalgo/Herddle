@@ -1,0 +1,97 @@
+// SECTION manager main :: START
+
+.manager-main {
+  overflow: hidden;
+  position: relative;
+  padding-top: 248px;
+  @include adaptive(1365) {
+    padding-top: 200px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 180px;
+    left: 282px;
+    width: 574px;
+    height: 422px;
+    background-color: #eafafc;
+    @include adaptive(1524) {
+      left: 15px;
+    }
+    @include adaptive(1365) {
+      top: 132px;
+    }
+  }
+
+  &__wrapper {
+    z-index: 0;
+    position: relative;
+    padding-left: 100px;
+    @include adaptive(1365) {
+      padding-left: 50px;
+    }
+    @include adaptive(767) {
+      padding-left: 0;
+    }
+  }
+
+  &__title {
+    padding-bottom: 64px;
+  }
+
+  &__desc {
+    display: flex;
+
+    > div {
+      width: 100%;
+
+      &:nth-of-type(1) {
+        max-width: 98px;
+        padding-top: 12px;
+        @include adaptive(767) {
+          width: 50px;
+        }
+      }
+      &:nth-of-type(2) {
+        max-width: 655px;
+      }
+    }
+
+    &-line {
+      width: 46px;
+      height: 2px;
+      background-color: #002a36;
+      @include adaptive(767) {
+        width: 30px;
+      }
+    }
+
+    &-title,
+    &-text {
+      padding-bottom: 30px;
+      font-size: 18px;
+      line-height: 28px;
+      @include adaptive(767) {
+        font-size: 16px;
+      }
+    }
+    
+    &-title {
+      font-weight: bold;
+    }
+
+    &-text {
+      &:last-of-type {
+        padding-bottom: 67px;
+      }
+    }
+
+    &-btn {
+      width: 100%;
+      max-width: 255px;
+      margin-left: auto;
+    }
+  }
+}
+
+// SECTION manager main :: END

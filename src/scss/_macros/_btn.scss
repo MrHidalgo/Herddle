@@ -32,6 +32,8 @@ $btn-color--border: rgba(#000, 1);
   //width: 100%;
   //max-width: $bth-width;
   //height: $bth-height;
+  padding-left: 15px;
+  padding-right: 15px;
   border: none;
   box-shadow: none;
   border-radius: $bth-border-radius;
@@ -118,14 +120,6 @@ $btn-color--border: rgba(#000, 1);
         background-color: lighten(#002a36, 7%);
       }
     }
-  }
-
-  &__text {
-    &-wrap {}
-  }
-
-  &__icon {
-    &-wrap {}
   }
 }
 

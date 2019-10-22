@@ -21,7 +21,7 @@ PageList:
   ready: 1
 - file: manager.html
   titleName: Customer Success Manager
-  ready: 1
+  ready: 75
 - file: contact-us.html
   titleName: Contact Us
   ready: 1
