@@ -36,6 +36,12 @@
 	@if $filename == instagram {
 		$char: "\E003";
 	}
+	@if $filename == mac {
+		$char: "\E004";
+	}
+	@if $filename == phone {
+		$char: "\E005";
+	}
 
 	@return $char;
 }
@@ -61,5 +67,13 @@
 }
 .icon-instagram {
 	@include icon(instagram);
+
+}
+.icon-mac {
+	@include icon(mac);
+
+}
+.icon-phone {
+	@include icon(phone);
 
 }

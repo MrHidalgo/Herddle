@@ -24,7 +24,7 @@
 }
 
 /* line 23, src/scss/_generated/_spriteFont.scss */
-.icon-arrow:before, .icon-facebook:before, .icon-instagram:before {
+.icon-arrow:before, .icon-facebook:before, .icon-instagram:before, .icon-mac:before, .icon-phone:before {
   font-family: "iconFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -35,19 +35,29 @@
   text-transform: none;
 }
 
-/* line 44, src/scss/_generated/_spriteFont.scss */
+/* line 50, src/scss/_generated/_spriteFont.scss */
 .icon-arrow:before {
   content: "";
 }
 
-/* line 44, src/scss/_generated/_spriteFont.scss */
+/* line 50, src/scss/_generated/_spriteFont.scss */
 .icon-facebook:before {
   content: "";
 }
 
-/* line 44, src/scss/_generated/_spriteFont.scss */
+/* line 50, src/scss/_generated/_spriteFont.scss */
 .icon-instagram:before {
   content: "";
+}
+
+/* line 50, src/scss/_generated/_spriteFont.scss */
+.icon-mac:before {
+  content: "";
+}
+
+/* line 50, src/scss/_generated/_spriteFont.scss */
+.icon-phone:before {
+  content: "";
 }
 
 @font-face {
@@ -600,7 +610,7 @@ picture {
 @media screen and (max-width: 575px) {
   /* line 3, src/scss/_macros/_title.scss */
   .c-title {
-    font-size: 45px;
+    font-size: 40px;
   }
 }
 
@@ -3373,6 +3383,185 @@ picture {
   /* line 120, src/scss/_components/humans/_team.scss */
   .team__block-body span {
     font-size: 16px;
+  }
+}
+
+/* line 3, src/scss/_components/build/_main.scss */
+.build-main {
+  position: relative;
+  padding-top: 212px;
+  padding-bottom: 70px;
+}
+
+@media screen and (max-width: 1439px) {
+  /* line 3, src/scss/_components/build/_main.scss */
+  .build-main {
+    padding-top: 175px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 3, src/scss/_components/build/_main.scss */
+  .build-main {
+    padding-top: 125px;
+  }
+}
+
+/* line 14, src/scss/_components/build/_main.scss */
+.build-main__bg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 900px;
+  background-color: #00171d;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 14, src/scss/_components/build/_main.scss */
+  .build-main__bg {
+    height: 75%;
+  }
+}
+
+/* line 27, src/scss/_components/build/_main.scss */
+.build-main__bg-left, .build-main__bg-right {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+
+/* line 35, src/scss/_components/build/_main.scss */
+.build-main__bg-left {
+  left: 0;
+  background-image: url("../img/img-build-main-bg-left.svg");
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 35, src/scss/_components/build/_main.scss */
+  .build-main__bg-left {
+    width: 100%;
+  }
+}
+
+/* line 45, src/scss/_components/build/_main.scss */
+.build-main__bg-right {
+  right: 0;
+  background-image: url("../img/img-build-main-bg-right.svg");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 45, src/scss/_components/build/_main.scss */
+  .build-main__bg-right {
+    display: none;
+  }
+}
+
+/* line 56, src/scss/_components/build/_main.scss */
+.build-main__wrapper {
+  z-index: 2;
+  position: relative;
+}
+
+/* line 61, src/scss/_components/build/_main.scss */
+.build-main__col {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 66, src/scss/_components/build/_main.scss */
+.build-main__title {
+  padding-bottom: 55px;
+  color: #ffffff;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 71, src/scss/_components/build/_main.scss */
+  .build-main__title br {
+    display: none;
+  }
+}
+
+/* line 77, src/scss/_components/build/_main.scss */
+.build-main .c-btn__wrapper {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* line 81, src/scss/_components/build/_main.scss */
+.build-main__btn {
+  width: 100%;
+  max-width: 242px;
+  margin-bottom: 42px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 89, src/scss/_components/build/_main.scss */
+.build-main__available {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 28px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* line 99, src/scss/_components/build/_main.scss */
+.build-main__available .icon-font {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+/* line 104, src/scss/_components/build/_main.scss */
+.build-main__available .icon-font.icon-mac {
+  font-size: 18px;
+}
+
+/* line 107, src/scss/_components/build/_main.scss */
+.build-main__available .icon-font.icon-phone {
+  font-size: 16px;
+}
+
+/* line 114, src/scss/_components/build/_main.scss */
+.build-main__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 114, src/scss/_components/build/_main.scss */
+  .build-main__img {
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
