@@ -1,0 +1,34 @@
+// SECTION team :: START
+
+section#team.team
+
+  .team__wrapper
+
+    h2.team__title.c-title Our Humans
+
+    .team__block-wrapper
+      each val, idx in [1,2,3,4]
+        div
+          a.team__block(href='#' title='')
+            .team__block-image
+              img(src='img/img-team-1.jpg' srcset='img/img-team-1@2x.jpg 2x')
+            .team__block-body
+              p Samantha Willkinson
+              span Project Manager
+        div
+          a.team__block(href='#' title='')
+            .team__block-image
+              img(src='img/img-team-2.jpg' srcset='img/img-team-2@2x.jpg 2x')
+            .team__block-body
+              p Charlie Peterson
+              span Founder & CEO
+
+      div
+        .team__block.team__block--empty
+          .team__block-image
+            img(src='img/img-team-empty.svg')
+          .team__block-body
+            p You?
+            span We're recruiting
+
+// SECTION team :: END

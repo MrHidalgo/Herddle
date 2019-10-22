@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="220px" height="294px" viewBox="0 0 220 294" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <desc>Created with Lunacy</desc>
+  <g id="img-team-empty" opacity="0.06075614">
+    <path d="M220 121L216.376 121L216.376 29.3382L143.818 4.62814L109.999 110.591L76.1768 4.62814L3.62379 29.3382L3.62379 121L0 121L0 26.7371L78.5033 0L109.999 98.6706L141.494 0L220 26.7371L220 121Z" transform="translate(0 173)" id="Path" fill="#000000" stroke="none" />
+    <path d="M2.38435 36L0 33.2623L9.17474 25.6012L6.92517 0.311917L10.5862 0L13 27.1368L2.38435 36Z" transform="translate(80 145)" id="Path" fill="#000000" stroke="none" />
+    <path d="M10.6152 36L0 27.1368L2.40931 0L6.07353 0.311917L3.82598 25.6012L13 33.2623L10.6152 36Z" transform="translate(130 145)" id="Path" fill="#000000" stroke="none" />
+    <path d="M0 145L145 145L145 0L0 0L0 145ZM141.401 141.401L3.59891 141.401L3.59891 3.59885L141.401 3.59885L141.401 141.401Z" transform="translate(38 0)" id="Shape" fill="#000000" fill-rule="evenodd" stroke="none" />
+    <path d="M47.9988 51L0 2.57721L2.55236 0L47.9988 45.848L93.4452 0L96 2.57721L47.9988 51Z" transform="translate(62 72)" id="Path" fill="#000000" stroke="none" />
+  </g>
+</svg>

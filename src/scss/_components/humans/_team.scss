@@ -1,0 +1,132 @@
+// SECTION team :: START
+
+.team {
+  padding-bottom: 75px;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__title {
+    padding-bottom: 44px;
+  }
+  
+  &__block {
+    display: block;
+    @include adaptive(575) {
+      width: 100%;
+      max-width: 425px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &.team__block--empty {
+      .team__block {
+        &-image {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #D8D8D8;
+
+          img {
+            position: static;
+            width: auto;
+            height: auto;
+            object-fit: unset;
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+        @include transition(transform 0.75s);
+      }
+    }
+
+    &-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% + 39px);
+      margin-left: -39px;
+      @include adaptive(767) {
+        width: calc(100% + 15px);
+        margin-left: -15px;
+      }
+      @include adaptive(575) {
+        width: 100%;
+        margin-left: 0;
+      }
+      
+      > div {
+        width: 100%;
+        max-width: calc((100%) / 3);
+        padding-left: 39px;
+        padding-bottom: 74px;
+        @include adaptive(767) {
+          max-width: calc((100%) / 2);
+          padding-bottom: 50px;
+          padding-left: 15px;
+        }
+        @include adaptive(575) {
+          max-width: calc((100%) / 1);
+          padding-left: 0;
+        }
+      }
+    }
+
+    &-image {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      max-width: 359px;
+      height: 372px;
+      background-color: #d8d8d8;
+      @include adaptive(1023) {
+        height: 322px;
+      }
+      @include adaptive(575) {
+        max-width: 100%;
+        height: 282px;
+      }
+
+      img {
+        @extend %imageResCoverAbs;
+        @include transition(transform 0.75s);
+      }
+    }
+
+    &-body {
+      padding-top: 27px;
+
+      p {
+        font-weight: bold;
+        font-size: 27px;
+        color: #002a36;
+        @include adaptive(1023) {
+          font-size: 24px;
+        }
+      }
+
+      span {
+        font-weight: 300;
+        font-size: 18px;
+        color: #002a36;
+        @include adaptive(1023) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+// SECTION team :: END
