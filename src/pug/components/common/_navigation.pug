@@ -1,0 +1,29 @@
+// SECTION navigation :: START
+
+section#navigation.navigation
+
+  .navigation__bg
+    img(src='img/img-navigation.svg')
+
+  .container
+
+    .navigation__wrapper
+
+      -
+        let navigationArr = [
+          'Customer Success Manager',
+          'Head of Marketing',
+          'Customer Success Manager',
+          'Head of Marketing'
+        ];
+      each val, idx in navigationArr
+        .navigation__link-wrapper
+          a.navigation__link.navigation__link-1(href='#' title='')
+            div
+              .navigation__link-line
+            div
+              p.navigation__link-title!= val
+              p.navigation__link-location London, UK
+            i.icon-font.icon-arrow
+
+// SECTION navigation :: END
