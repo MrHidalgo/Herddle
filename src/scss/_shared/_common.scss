@@ -11,7 +11,7 @@
   &-control {
     outline: none;
     width: 100%;
-    max-width: 327px;
+    max-width: 100%;
     height: 53px;
     border-radius: 3px;
     background-color: rgba(#fff, 0.6);
@@ -25,6 +25,10 @@
       color: rgba(#002a36, 0.5);
       font-size: 16px;
     }
+    @include adaptive(1365) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
 
     &:focus,
     &:hover {
@@ -35,12 +39,19 @@
 
   &__row {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
   &__col {
     width: 100%;
     max-width: calc((100% - 38px) / 2);
+    @include adaptive(1023) {
+      max-width: calc((100% - 15px) / 2);
+    }
+    @include adaptive(767) {
+      max-width: 100%;
+    }
   }
 
   &__label {
@@ -51,8 +62,68 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #002a36;
+    @include adaptive(1279) {
+      font-size: 10px;
+    }
   }
 }
 // form :: end
+
+// copyright
+.copyright {
+  text-align: center;
+
+  &__text {
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    color: #002a36;
+  }
+}
+// copyright :: end
+
+// social
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  @include adaptive(767) {
+    justify-content: center;
+    padding-top: 30px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    margin-right: 12px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      .icon-font {
+        @include transition(color);
+
+        &.icon {
+          &-instagram {
+            color: #c32aa3;
+          }
+          &-facebook {
+            color: #3b5998;
+          }
+        }
+      }
+    }
+
+    .icon-font {
+      color: #002a36;
+      font-size: 19px;
+      @include transition(color);
+    }
+  }
+}
+// social :: end
 
 // COMMON :: END

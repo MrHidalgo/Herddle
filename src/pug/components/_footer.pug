@@ -1,7 +1,78 @@
 // FOOTER :: START
 
 footer#footer.footer
-  .c-grid
-    .footer__wrapper
+  .footer__wrapper.footer__wrapper-1
+
+    .footer__cover
+      .footer__cover-img
+        img(src='img/img-curve-line.svg')
+
+      .container
+        .footer__cover-row
+          .footer__cover-col.footer__cover-col-1
+            p.footer__title SOLUTIONS
+
+            -
+              let footerNav1 = [
+                'Private Landlords',
+                'Institutional Investors',
+                'Social Housing Providers',
+                'Letting & Property Management',
+                'Block Management',
+                'Contractors',
+                'Residents'
+              ];
+            ul.footer__nav
+              each val, idx in footerNav1
+                li.footer__nav-item
+                  a.footer__nav-link(href='#' title='')!= val
+
+
+          .footer__cover-col.footer__cover-col-2
+            p.footer__title COMPANY
+
+            -
+              let footerNav2 = [
+                'About Herddle',
+                'Book a demo',
+                'Careers',
+                'Contact',
+                'Privacy Policy',
+                'Terms & Conditions',
+              ];
+            ul.footer__nav
+              each val, idx in footerNav2
+                li.footer__nav-item
+                  a.footer__nav-link(href='#' title='')!= val
+
+          .footer__cover-col.footer__cover-col-3
+            .footer__slogan
+              img(src='img/img-goodThinking.svg')
+
+            .footer__store
+              a.footer__store-link.footer__store-link--appstore(href='#' title='')
+                img(src='img/img-appstore.jpeg' srcset='img/img-appstore@2x.jpeg 2x')
+              a.footer__store-link.footer__store-link--googlePlay(href='#' title='')
+                img(src='img/img-google-play.jpeg' srcset='img/img-google-play@2x.jpeg 2x')
+
+  .footer__wrapper.footer__wrapper-2
+    div
+
+      .logo.logo--footer
+        a.logo__link(href='/' title='')
+          img.logo__img(src='img/logo-dark.png' srcset='img/logo-dark@2x.png 2x')
+
+    div
+
+      .copyright
+        p.copyright__text HERDDLE GROUP LIMITED, 47 MARYLEBONE LANE, LONDON, ENGLAND, W1U 2NT. COMPANY NUMBER 10848122 ALL RIGHTS RESERVED.
+
+    div
+
+      .social
+        a.social__btn.social__btn--instagram(href='#' title='')
+          i.icon-font.icon-instagram
+        a.social__btn.social__btn--facebook(href='#' title='')
+          i.icon-font.icon-facebook
 
 // FOOTER :: END

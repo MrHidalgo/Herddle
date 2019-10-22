@@ -1,5 +1,208 @@
 // FOOTER :: START
 
-.footer {}
+.footer {
+  overflow: hidden;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 1560px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &-2 {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 110px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      @include adaptive(767) {
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      > div {
+        &:nth-of-type(1),
+        &:nth-of-type(3) {
+          width: 100%;
+          max-width: 141px;
+          @include adaptive(767) {
+            max-width: 100%;
+          }
+        }
+
+        &:nth-of-type(1) {
+          @include adaptive(767) {
+            order: 1;
+          }
+        }
+
+        &:nth-of-type(2) {
+          flex: 1;
+          min-width: 1px;
+          max-width: 100%;
+          padding-left: 30px;
+          padding-right: 30px;
+          @include adaptive(767) {
+            order: 3;
+            padding-left: 0;
+            padding-right: 0;
+            padding-top: 30px;
+          }
+        }
+
+        &:nth-of-type(3) {
+          @include adaptive(767) {
+            order: 2;
+          }
+        }
+      }
+    }
+  }
+
+  &__cover {
+    padding-top: 60px;
+    padding-bottom: 90px;
+    background-color: rgba(#f6ed02, 0.11);
+    @include adaptive(767) {
+      padding-bottom: 60px;
+    }
+
+    &-img {
+      padding-bottom: 60px;
+      @include adaptive(767) {
+        padding-bottom: 30px;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        transform: translateX(48px);
+        @include adaptive(767) {
+          max-width: unset;
+        }
+      }
+    }
+
+    &-row {
+      display: flex;
+      @include adaptive(1023) {
+        flex-wrap: wrap;
+      }
+    }
+
+    &-col {
+      width: 100%;
+
+      &-1 {
+        max-width: 400px;
+        padding-right: 30px;
+        @include adaptive(1279) {
+          max-width: 300px;
+        }
+        @include adaptive(1023) {
+          max-width: 50%;
+        }
+        @include adaptive(767) {
+          padding-right: 15px;
+        }
+      }
+      &-2 {
+        max-width: 340px;
+        padding-right: 30px;
+        @include adaptive(1279) {
+          max-width: 300px;
+        }
+        @include adaptive(1023) {
+          max-width: 50%;
+        }
+        @include adaptive(767) {
+          padding-right: 0;
+        }
+      }
+      &-3 {
+        flex: 1;
+        min-width: 1px;
+        max-width: 100%;
+        padding-top: 53px;
+      }
+    }
+  }
+
+  &__title {
+    padding-bottom: 39px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    color: #002a36;
+    @include adaptive(767) {
+      padding-bottom: 20px;
+      font-size: 12px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+
+    &-item {
+      padding-bottom: 20px;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+
+    &-link {
+      display: flex;
+      font-weight: 300;
+      font-size: 16px;
+      color: #002a36;
+      @include transition(color);
+      @include adaptive(767) {
+        font-size: 14px;
+      }
+
+      &:hover {
+        color: #00abdb;
+        @include transition(color);
+      }
+    }
+  }
+
+  &__slogan {
+    padding-bottom: 28px;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__store {
+    display: flex;
+    align-items: center;
+
+    &-link {
+      display: flex;
+      align-items: flex-start;
+
+      &--appstore {
+        margin-right: 17px;
+      }
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
 
 // FOOTER :: END

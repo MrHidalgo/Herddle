@@ -7,7 +7,8 @@ section#get-started.get-started
 
       .logo.logo--getStarted
         a.logo__link(href='/' title='')
-          img.logo__img(src='img/logo.svg')
+          img.logo__img.logo__img--white(src='img/logo-white.png' srcset='img/logo-white@2x.png 2x')
+          img.logo__img.logo__img--dark(src='img/logo-dark.png' srcset='img/logo-dark@2x.png 2x')
 
     div
 
@@ -42,11 +43,11 @@ section#get-started.get-started
             .form__col.form__col-1
               .form-group
                 label.form__label(for='getStartedInput4') What describes you best?
-                  select#getStartedInput4.form-control
-                    option(selected disabled) Please select
-                    option 1
-                    option 2
-                    option 3
+                select#getStartedInput4.form-control
+                  option(selected disabled) Please select
+                  option 1
+                  option 2
+                  option 3
 
             .form__col.form__col-2
               .form-group
@@ -69,7 +70,7 @@ section#get-started.get-started
                   option 3
 
           .c-btn__wrapper
-            button.get-started__btn.c-btn.c-btn--big.c-btn--bg--irisBlue(type='submit')
+            button.get-started__submit.c-btn.c-btn--big.c-btn--bg--irisBlue(type='submit')
               span Request Access
 
 // SECTION Get Started :: END

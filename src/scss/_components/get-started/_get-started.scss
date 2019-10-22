@@ -3,6 +3,23 @@
 .get-started {
   position: relative;
 
+  &--case {
+    .get-started {
+      &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        > div {
+          &:nth-of-type(1) {
+            padding-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
+
   &__header {
     position: absolute;
     top: 0;
@@ -14,9 +31,29 @@
     padding-top: 50px;
     padding-left: 70px;
     padding-right: 70px;
+    @include adaptive(1023) {
+      padding-top: 30px;
+    }
+    @include adaptive(767) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    > div {
+      &:nth-of-type(2) {
+        @include adaptive(767) {
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: flex-end;
+        }
+      }
+    }
 
     .c-link {
       margin-right: 25px;
+      @include adaptive(767) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -37,6 +74,9 @@
       background-repeat: no-repeat;
       background-size: cover;
       background-position: top center;
+      @include adaptive(767) {
+        display: none;
+      }
     }
 
     &-right {
@@ -46,6 +86,12 @@
       flex: 1;
       min-width: 1px;
       padding: 120px 15px;
+      @include adaptive(1023) {
+        padding-bottom: 50px;
+      }
+      @include adaptive(767) {
+        padding-top: 150px;
+      }
     }
   }
 
@@ -58,16 +104,24 @@
 
   &__title {
     padding-bottom: 40px;
+    @include adaptive(767) {
+      text-align: center;
+    }
   }
 
   &__subtitle {
     padding-bottom: 47px;
   }
 
-  &__btn {
+  &__submit {
     width: 100%;
     max-width: 242px;
     margin-top: 6px;
+    @include adaptive(767) {
+      margin-top: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 

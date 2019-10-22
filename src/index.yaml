@@ -6,10 +6,10 @@ PageList:
   ready: 1
 - file: get-started.html
   titleName: Get Started
-  ready: 55
+  ready: 90
 - file: your-case.html
   titleName: Your case
-  ready: 55
+  ready: 90
 - file: your-career.html
   titleName: Your Career
   ready: 1
