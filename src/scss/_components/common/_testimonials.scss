@@ -1,0 +1,177 @@
+// SECTION testimonials :: START
+
+.testimonials {
+  padding-top: 50px;
+  padding-bottom: 60px;
+  @include adaptive(767) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1157px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 80px;
+    
+    &:before {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: calc(100% - 140px);
+      background-color: #F4F4F4;
+      @include adaptive(767) {
+        height: 100%;
+      }
+    }
+
+    &-left,
+    &-right {
+      width: 50%;
+      @include adaptive(767) {
+        width: 100%;
+      }
+    }
+
+    &-left {
+      padding-left: 90px;
+      @include adaptive(1279) {
+        padding-left: 45px;
+      }
+      @include adaptive(1023) {
+        padding-left: 15px;
+      }
+    }
+
+    &-right {
+      padding-top: 57px;
+      padding-right: 75px;
+      @include adaptive(1279) {
+        padding-top: 30px;
+        padding-right: 37px;
+      }
+      @include adaptive(1023) {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      @include adaptive(767) {
+        padding-bottom: 30px;
+      }
+    }
+  }
+
+  &__quotes {
+    position: absolute;
+    left: 19px;
+    top: -38px;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__arrow {
+    &--prev {}
+    &--next {}
+
+    &--prev,
+    &--next {
+      @include transition(opacity);
+
+      &.swiper-button-disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        @include transition(opacity);
+      }
+    }
+
+    &-wrapper {
+      position: absolute;
+      top: 27px;
+      right: 42px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__pagination {
+    min-width: 30px;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-weight: 500;
+    font-size: 19px;
+    text-align: center;
+    @include adaptive(1023) {
+      font-size: 17px;
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    @include adaptive(767) {
+      max-height: 250px;
+      margin-left: auto;
+      margin-right: 15px;
+    }
+  }
+
+  &__name,
+  &__position {
+    @include adaptive(767) {
+      text-align: right;
+      padding-right: 15px;
+    }
+  }
+
+  &__name {
+    padding-top: 22px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  &__position {
+    line-height: 28px;
+  }
+
+  &__text {
+    padding-bottom: 60px;
+    font-weight: 500;
+    font-size: 37px;
+    color: #002A36;
+    @extend %fontBigCaslon;
+    @include adaptive(1279) {
+      font-size: 33px;
+    }
+    @include adaptive(1023) {
+      padding-bottom: 40px;
+      font-size: 30px;
+    }
+    @include adaptive(767) {
+      font-size: 26px;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 242px;
+  }
+}
+
+// SECTION testimonials :: END

@@ -15,7 +15,7 @@ PageList:
   ready: 1
 - file: humans.html
   titleName: Prop-tech company
-  ready: 35
+  ready: 75
 - file: most.html
   titleName: Most Meaningful Work
   ready: 75
