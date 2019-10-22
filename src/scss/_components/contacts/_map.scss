@@ -1,0 +1,30 @@
+// SECTION map :: START
+
+.map {
+  z-index: 0;
+  position: relative;
+  transform: translateY(-60px);
+  padding-top: 30px;
+  @include adaptive(1023) {
+    transform: translateY(-30px);
+  }
+  @include adaptive(767) {
+    transform: translateY(0);
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &__box {
+    height: 780px;
+    @include adaptive(1279) {
+      height: 700px;
+    }
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// SECTION map :: END

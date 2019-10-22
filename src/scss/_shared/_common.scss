@@ -37,6 +37,11 @@
     }
   }
 
+  &__textarea {
+    resize: none;
+    min-height: 102px;
+  }
+
   &__row {
     display: flex;
     flex-wrap: wrap;
