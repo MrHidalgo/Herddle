@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 6, src/scss/_utilities/_extend.scss */
-.c-title, .navigation__link-title, .review__text, .testimonials__text, .flow__title, .description__text, .description__item, .solutions__block p {
+.c-title, .navigation__link-title, .review__text, .testimonials__text, .flow__title, .description__text, .description__item, .definition__title, .solutions__block p {
   font-family: 'BigCaslon', 'ProximaNova', sans-serif;
 }
 
@@ -639,7 +639,12 @@ picture {
   }
 }
 
-/* line 18, src/scss/_macros/_subtitle.scss */
+/* line 19, src/scss/_macros/_subtitle.scss */
+.c-subtitle--woline:before {
+  display: none;
+}
+
+/* line 24, src/scss/_macros/_subtitle.scss */
 .c-subtitle:before {
   content: '';
   position: absolute;
@@ -651,7 +656,7 @@ picture {
 }
 
 @media screen and (max-width: 767px) {
-  /* line 18, src/scss/_macros/_subtitle.scss */
+  /* line 24, src/scss/_macros/_subtitle.scss */
   .c-subtitle:before {
     width: 30px;
   }
@@ -3563,6 +3568,295 @@ picture {
         -ms-transform: translateY(0);
             transform: translateY(0);
   }
+}
+
+/* line 3, src/scss/_components/build/_definition.scss */
+.definition {
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 3, src/scss/_components/build/_definition.scss */
+  .definition {
+    padding-bottom: 50px;
+  }
+}
+
+/* line 10, src/scss/_components/build/_definition.scss */
+.definition__wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1190px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 200px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 10, src/scss/_components/build/_definition.scss */
+  .definition__wrapper {
+    padding-bottom: 100px;
+  }
+}
+
+/* line 26, src/scss/_components/build/_definition.scss */
+.definition__wrapper:last-of-type {
+  padding-bottom: 0;
+}
+
+/* line 32, src/scss/_components/build/_definition.scss */
+.definition__wrapper-1 img, .definition__wrapper-3 img {
+  margin-left: auto;
+}
+
+/* line 36, src/scss/_components/build/_definition.scss */
+.definition__wrapper-1 .definition__wrapper-left, .definition__wrapper-3 .definition__wrapper-left {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  padding-left: 130px;
+  padding-right: 75px;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 36, src/scss/_components/build/_definition.scss */
+  .definition__wrapper-1 .definition__wrapper-left, .definition__wrapper-3 .definition__wrapper-left {
+    padding-left: 30px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 36, src/scss/_components/build/_definition.scss */
+  .definition__wrapper-1 .definition__wrapper-left, .definition__wrapper-3 .definition__wrapper-left {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* line 52, src/scss/_components/build/_definition.scss */
+.definition__wrapper-1 .definition__wrapper-left > div, .definition__wrapper-3 .definition__wrapper-left > div {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 63, src/scss/_components/build/_definition.scss */
+.definition__wrapper-2, .definition__wrapper-4 {
+  margin-right: auto;
+}
+
+/* line 67, src/scss/_components/build/_definition.scss */
+.definition__wrapper-2 .definition__wrapper-right, .definition__wrapper-4 .definition__wrapper-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  padding-left: 75px;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 67, src/scss/_components/build/_definition.scss */
+  .definition__wrapper-2 .definition__wrapper-right, .definition__wrapper-4 .definition__wrapper-right {
+    padding-left: 15px;
+  }
+}
+
+/* line 76, src/scss/_components/build/_definition.scss */
+.definition__wrapper-2 .definition__wrapper-right > div, .definition__wrapper-4 .definition__wrapper-right > div {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 89, src/scss/_components/build/_definition.scss */
+.definition__wrapper-1 .definition__wrapper-left:before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: -75px;
+  left: 30px;
+  width: 100%;
+  max-width: 507px;
+  height: 373px;
+  background-color: #eafafc;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 102, src/scss/_components/build/_definition.scss */
+  .definition__wrapper-2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+/* line 108, src/scss/_components/build/_definition.scss */
+.definition__wrapper-2 .definition__wrapper-right:before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: -75px;
+  right: -15px;
+  width: 100%;
+  max-width: 527px;
+  height: 395px;
+  background-color: rgba(246, 237, 2, 0.11);
+}
+
+/* line 123, src/scss/_components/build/_definition.scss */
+.definition__wrapper-3 .definition__wrapper-left:before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: -75px;
+  left: 15px;
+  width: 100%;
+  max-width: 517px;
+  height: 379px;
+  background-color: rgba(234, 234, 234, 0.34);
+}
+
+@media screen and (max-width: 767px) {
+  /* line 136, src/scss/_components/build/_definition.scss */
+  .definition__wrapper-4 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+/* line 142, src/scss/_components/build/_definition.scss */
+.definition__wrapper-4 .definition__wrapper-right:before {
+  content: '';
+  z-index: -1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+  width: 100%;
+  max-width: 593px;
+  height: 342px;
+  background-color: rgba(0, 196, 222, 0.08);
+}
+
+@media screen and (max-width: 1439px) {
+  /* line 142, src/scss/_components/build/_definition.scss */
+  .definition__wrapper-4 .definition__wrapper-right:before {
+    right: -15px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 159, src/scss/_components/build/_definition.scss */
+  .definition__wrapper-left, .definition__wrapper-right {
+    width: 100%;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 159, src/scss/_components/build/_definition.scss */
+  .definition__wrapper-left, .definition__wrapper-right {
+    max-width: 100%;
+  }
+}
+
+/* line 170, src/scss/_components/build/_definition.scss */
+.definition__wrapper img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 170, src/scss/_components/build/_definition.scss */
+  .definition__wrapper img {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+/* line 184, src/scss/_components/build/_definition.scss */
+.definition__title {
+  padding-bottom: 50px;
+  font-weight: 500;
+  font-size: 50px;
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 184, src/scss/_components/build/_definition.scss */
+  .definition__title {
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 184, src/scss/_components/build/_definition.scss */
+  .definition__title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 184, src/scss/_components/build/_definition.scss */
+  .definition__title {
+    padding-bottom: 40px;
+    font-size: 35px;
+  }
+  /* line 199, src/scss/_components/build/_definition.scss */
+  .definition__title br {
+    display: none;
+  }
+}
+
+/* line 205, src/scss/_components/build/_definition.scss */
+.definition__desc {
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 205, src/scss/_components/build/_definition.scss */
+  .definition__desc {
+    padding-bottom: 20px;
+  }
+}
+
+/* line 211, src/scss/_components/build/_definition.scss */
+.definition__desc:last-of-type {
+  padding-bottom: 0;
 }
 
 /* line 3, src/scss/_components/build/_solutions.scss */
