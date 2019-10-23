@@ -6,14 +6,18 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(#ffffff, 0.975);
-  @include transition(box-shadow);
+  @include transition(background-color, box-shadow);
   @include adaptive(767) {
+    background-color: rgba(#ffffff, 0.975);
     box-shadow: 0px 2px 44px rgba(0, 0, 0, 0.07);
   }
 
   &.header--dark {
     background-color: #00171d;
+
+    &.header--fixed {
+      background-color: #00171d;
+    }
 
     .header {
       &__nav {
@@ -48,8 +52,9 @@
   }
 
   &.header--fixed {
+    background-color: rgba(#ffffff, 0.975);
     box-shadow: 0px 2px 44px rgba(0, 0, 0, 0.07);
-    @include transition(box-shadow);
+    @include transition(background-color, box-shadow);
 
     .header {
       &__wrapper {

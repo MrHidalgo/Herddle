@@ -1,0 +1,151 @@
+// SECTION main :: START
+
+.main {
+  position: relative;
+  padding-top: 194px;
+  padding-bottom: 70px;
+  @include adaptive(1439) {
+    padding-top: 175px;
+  }
+  @include adaptive(767) {
+    padding-top: 125px;
+  }
+
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 900px;
+    @include adaptive(1023) {
+      opacity: 0.25;
+    }
+    @include adaptive(767) {
+      display: none;
+    }
+
+    &-left,
+    &-right {
+      position: absolute;
+      top: 0;
+      width: 50%;
+      height: 100%;
+    }
+
+    &-left {
+      left: 0;
+      background-image: url('../img/img-main-bg-left.svg');
+      background-repeat: no-repeat;
+      background-position: left bottom;
+    }
+
+    &-right {
+      right: 0;
+      background-image: url('../img/img-main-bg-right.svg');
+      background-repeat: no-repeat;
+      background-position: right bottom;
+    }
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+  }
+
+  &__col {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__title {
+    padding-bottom: 35px;
+    text-align: center;
+    @include adaptive(767) {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__desc {
+    width: 100%;
+    max-width: 818px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 50px;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
+    color: #002a36;
+  }
+
+  .c-btn__wrapper {
+    justify-content: center;
+  }
+
+  &__btn {
+    width: 100%;
+    max-width: 242px;
+    margin-bottom: 42px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__available {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 28px;
+    text-align: center;
+    color: #002A36;
+
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    &:before {
+      content: '';
+      z-index: -1;
+      position: absolute;
+      bottom: 0;
+      left: -15px;
+      width: calc(100% + 30px);
+      height: 17px;
+      background: rgba(#00c4de, 0.11);
+    }
+
+    .icon-font {
+      margin-left: 5px;
+      margin-right: 5px;
+
+      &.icon {
+        &-mac {
+          font-size: 18px;
+        }
+        &-phone {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    @include adaptive(767) {
+      transform: translateY(0);
+    }
+  }
+}
+
+// SECTION main :: END
