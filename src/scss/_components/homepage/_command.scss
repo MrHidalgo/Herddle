@@ -1,0 +1,158 @@
+// SECTION command :: START
+
+.command {
+  padding-top: 176px;
+  padding-bottom: 136px;
+  @include adaptive(1279) {
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+  @include adaptive(767) {
+    padding-top: 100px;
+    padding-bottom: 75px;
+  }
+
+  &__grid {
+    width: 100%;
+    max-width: 1430px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__wrapper {
+    display: flex;
+    width: 100%;
+    @include adaptive(767) {
+      flex-direction: column;
+    }
+
+    &-1 {
+      padding-bottom: 15px;
+
+      .command__block-1 {
+        margin-right: 7px;
+        @include adaptive(767) {
+          margin: 0;
+        }
+      }
+
+      .command__block-2 {
+        margin-top: 139px;
+        margin-left: 7px;
+        @include adaptive(767) {
+          margin: 0;
+        }
+      }
+    }
+
+    &-2 {
+      justify-content: flex-end;
+
+      .command__block-1 {
+        margin-right: 7px;
+        @include adaptive(767) {
+          margin: 0;
+        }
+      }
+
+      .command__block-2 {
+        margin-top: 113px;
+        margin-left: 7px;
+        @include adaptive(767) {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &__block {
+    position: relative;
+
+    &-1 {
+      width: 100%;
+      max-width: 586px;
+      height: 752px;
+
+      .command__block {
+        &-image {
+          top: 0;
+          left: 0;
+          width: 100%;
+          max-width: 424px;
+          height: 528px;
+        }
+
+        &-body {
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          max-width: 462px;
+          min-height: 354px;
+        }
+      }
+    }
+
+    &-2 {
+      width: 100%;
+      max-width: 560px;
+      height: 683px;
+
+      .command__block {
+        &-image {
+          top: 0;
+          right: 0;
+          width: 100%;
+          max-width: 420px;
+          height: 529px;
+        }
+
+        &-body {
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          max-width: 462px;
+          min-height: 354px;
+        }
+      }
+    }
+
+    &-image {
+      overflow: hidden;
+      position: absolute;
+
+      img {
+        @extend %imageResCoverAbs;
+      }
+    }
+
+    &-body {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      padding: 50px;
+      background-color: #ffffff;
+      @include adaptive(1279) {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+    }
+
+    &-title {
+      padding-bottom: 30px;
+      font-weight: 500;
+      font-size: 50px;
+      color: #002a36;
+      @extend %fontBigCaslon;
+      @include adaptive(1279) {
+        font-size: 40px;
+      }
+      @include adaptive(767) {
+        font-size: 33px;
+      }
+    }
+  }
+}
+
+// SECTION command :: END
