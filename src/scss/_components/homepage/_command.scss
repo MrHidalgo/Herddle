@@ -70,6 +70,41 @@
   &__block {
     position: relative;
 
+    &:hover {
+      &.command__block {
+        &-1 {
+          .command__block {
+            &-body {
+              border-top-left-radius: 50px;
+              @include transition(box-shadow, border-radius);
+            }
+          }
+        }
+        &-2 {
+          .command__block {
+            &-body {
+              border-top-right-radius: 50px;
+              @include transition(box-shadow, border-radius);
+            }
+          }
+        }
+      }
+
+      .command__block {
+        &-body {
+          box-shadow: 0 5px 15px 0 rgba(#000, 0.05);
+          @include transition(box-shadow);
+        }
+
+        &-image {
+          img {
+            transform: scale(1.1);
+            @include transition(transform 0.5s);
+          }
+        }
+      }
+    }
+
     &-1 {
       width: 100%;
       max-width: 586px;
@@ -124,6 +159,9 @@
 
       img {
         @extend %imageResCoverAbs;
+        transform-origin: center;
+        backface-visibility: hidden;
+        @include transition(transform);
       }
     }
 
@@ -133,6 +171,7 @@
       align-items: center;
       padding: 50px;
       background-color: #ffffff;
+      @include transition(box-shadow, border-radius);
       @include adaptive(1279) {
         padding-left: 30px;
         padding-right: 30px;

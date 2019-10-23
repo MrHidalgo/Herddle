@@ -131,4 +131,13 @@
 }
 // social :: end
 
+// ANIMATION PARALLAX
+[parallax-js] {
+  will-change: transform;
+  transform-origin: center;
+  backface-visibility: hidden;
+  transition: transform 2s cubic-bezier(0, 0, 0, 1) 0s;
+}
+// ANIMATION PARALLAX :: END
+
 // COMMON :: END

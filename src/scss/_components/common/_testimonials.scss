@@ -47,6 +47,7 @@
 
     &-left {
       padding-left: 90px;
+      padding-right: 15px;
       @include adaptive(1279) {
         padding-left: 45px;
       }

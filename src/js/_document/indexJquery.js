@@ -35,6 +35,7 @@ $(document).ready((ev) => {
     // lib
     initSwiper();
     initHamburger();
+    initStellar();
 		// ==========================================
 
     // callback

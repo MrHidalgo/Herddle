@@ -1,0 +1,164 @@
+// SECTION comment :: START
+
+.comment {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  @include adaptive(767) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 100%;
+      max-width: 1531px;
+      height: 565px;
+      background: rgba(#f6ed02, 0.11);
+    }
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    width: 100%;
+    max-width: 1157px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    @include adaptive(767) {
+      flex-wrap: wrap;
+    }
+
+    &-left,
+    &-right {
+      width: auto;
+      @include adaptive(767) {
+        width: 100%;
+      }
+    }
+
+    &-left {
+      position: relative;
+      padding-right: 15px;
+    }
+
+    &-right {
+      padding-top: 57px;
+      padding-left: 143px;
+      padding-right: 75px;
+      @include adaptive(1279) {
+        padding-top: 30px;
+        padding-left: 100px;
+        padding-right: 37px;
+      }
+      @include adaptive(1023) {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+      @include adaptive(767) {
+        padding-bottom: 30px;
+        padding-top: 100px;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+
+    &-wrapper {
+      position: relative;
+    }
+  }
+
+  &__quote {
+    font-weight: 500;
+    font-size: 167px;
+    line-height: 0.4;
+    color: #002a36;
+    @extend %fontBigCaslon;
+    @include adaptive(767) {
+      font-size: 137px;
+    }
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 460px;
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 37px;
+    @extend %fontBigCaslon;
+    @include adaptive(1279) {
+      font-size: 33px;
+    }
+    @include adaptive(1023) {
+      padding-bottom: 40px;
+      font-size: 30px;
+    }
+    @include adaptive(767) {
+      font-size: 26px;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    bottom: -26px;
+    right: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 201px;
+    height: 53px;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 1px solid #002a36;
+    @include transition(background-color);
+
+    &:hover {
+      background-color: #002a36;
+      @include transition(background-color);
+
+      span,
+      .icon-font {
+        color: #ffffff;
+        @include transition(color);
+      }
+
+      .icon-font {
+        transform: translateX(50%);
+        @include transition(color, transform);
+      }
+    }
+
+    span {
+      font-weight: 500;
+      font-size: 17px;
+      color: #002a36;
+      @include transition(color);
+    }
+
+    .icon-font {
+      color: #002a36;
+      margin-left: 12px;
+      font-size: 12px;
+      backface-visibility: hidden;
+      @include transition(color, transform);
+    }
+  }
+}
+
+// SECTION comment :: END

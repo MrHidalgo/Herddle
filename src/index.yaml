@@ -3,7 +3,7 @@ ProjectTitle: Herddle
 PageList:
 - file: index.html
   titleName: Home
-  ready: 1
+  ready: 90
 - file: get-started.html
   titleName: Get Started
   ready: 90
@@ -12,16 +12,16 @@ PageList:
   ready: 90
 - file: humans.html
   titleName: Prop-tech company
-  ready: 75
+  ready: 90
 - file: most.html
   titleName: Most Meaningful Work
-  ready: 75
+  ready: 90
 - file: build.html
   titleName: Built and designed
-  ready: 75
+  ready: 90
 - file: manager.html
   titleName: Customer Success Manager
-  ready: 75
+  ready: 90
 - file: contact-us.html
   titleName: Contact Us
-  ready: 75
+  ready: 90
