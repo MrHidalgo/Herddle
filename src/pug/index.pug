@@ -5,7 +5,10 @@ pageClassName: p-home
 ---
 extends shared/_layout
 
+block header
 block content
   div.body.body--start(class!= pageClassName)
+
+    include components/homepage/_how
 
     include components/common/_flow
