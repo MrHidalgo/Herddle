@@ -36,20 +36,23 @@
 	@if $filename == careers {
 		$char: "\E003";
 	}
-	@if $filename == contact {
+	@if $filename == checked {
 		$char: "\E004";
 	}
-	@if $filename == facebook {
+	@if $filename == contact {
 		$char: "\E005";
 	}
-	@if $filename == instagram {
+	@if $filename == facebook {
 		$char: "\E006";
 	}
-	@if $filename == mac {
+	@if $filename == instagram {
 		$char: "\E007";
 	}
-	@if $filename == phone {
+	@if $filename == mac {
 		$char: "\E008";
+	}
+	@if $filename == phone {
+		$char: "\E009";
 	}
 
 	@return $char;
@@ -76,6 +79,10 @@
 }
 .icon-careers {
 	@include icon(careers);
+
+}
+.icon-checked {
+	@include icon(checked);
 
 }
 .icon-contact {

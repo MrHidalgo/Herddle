@@ -1,0 +1,66 @@
+// SECTION advantage :: START
+
+section#advantage.advantage
+
+  .advantage__bg
+    img(src='img/img-advantage-bg.svg')
+
+  .advantage__wrapper.advantage__wrapper-1
+
+    .advantage__block.advantage__block-1
+      .advantage__block-image
+        img(src='img/img-advantage-1.jpg' srcset='img/img-advantage-1@2x.jpg 2x')
+      .advantage__block-body
+        div
+          p.advantage__block-title.c-title!= "Private </br>Landlords"
+          p.advantage__block-desc.c-subtitle We made it easy as pie to manage your properties and lettings. The property management tool you’ve always dreamed of, powered by smart technology and dedicated humans.
+
+          .advantage__block-col
+
+            ul.advantage__block-list
+              -
+                let advantageListArr = [
+                  'Sample benefit',
+                  'Sample benefit',
+                  'Another sample benefit',
+                  'Sample benefit',
+                  'Sample benefit',
+                  'Another sample benefit'
+                ];
+              each val, idx in advantageListArr
+                li.advantage__block-item
+                  div
+                    i.icon-font.icon-checked
+                  div
+                    p!= val
+
+            .c-btn__wrapper
+              a.advantage__block-btn.c-btn.c-btn--big.c-btn--bg.c-btn--bg--blackPearl(href='#' title='')
+                span Show More
+
+  .advantage__wrapper.advantage__wrapper-2
+
+    .advantage__block.advantage__block-2
+      .advantage__block-body
+        div
+          p.advantage__block-title.c-title Institutional Investors
+          p.advantage__block-desc.c-subtitle We made it easy as pie to manage your properties and lettings. The property management tool you’ve always dreamed of, powered by smart technology and dedicated humans.
+
+          .advantage__block-col
+
+            ul.advantage__block-list
+              each val, idx in advantageListArr
+                li.advantage__block-item
+                  div
+                    i.icon-font.icon-checked
+                  div
+                    p!= val
+
+            .c-btn__wrapper
+              a.advantage__block-btn.c-btn.c-btn--big.c-btn--bg.c-btn--bg--blackPearl(href='#' title='')
+                span Show More
+
+      .advantage__block-image
+        img(src='img/img-advantage-2.jpg' srcset='img/img-advantage-2@2x.jpg 2x')
+
+// SECTION advantage :: END

@@ -1,0 +1,207 @@
+// SECTION advantage :: START
+
+.advantage {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 202px;
+  @include adaptive(767) {
+    padding-top: 75px;
+    padding-bottom: 25px;
+  }
+
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    @include adaptive(767) {
+      display: none;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-top: -411px;
+    }
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &-1 {
+      padding-bottom: 290px;
+      @include adaptive(767) {
+        padding-bottom: 0;
+      }
+    }
+
+    &-2 {
+      padding-bottom: 130px;
+      @include adaptive(767) {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__block {
+    display: flex;
+    align-items: flex-start;
+    @include adaptive(767) {
+      flex-direction: column;
+    }
+
+    &-1 {
+      .advantage__block {
+        &-image {
+          max-width: 536px;
+          height: 742px;
+          @include adaptive(767) {
+            height: 424px;
+          }
+        }
+
+        &-body {
+          transform: translate(-90px, 146px);
+          max-width: 643px;
+          background-color: #e6fcff;
+          @include adaptive(1279) {
+            transform: translate(-50px, 116px);
+          }
+          @include adaptive(767) {
+            max-width: 95%;
+            margin-left: auto;
+            transform: translate(0px, -116px);
+          }
+        }
+      }
+    }
+    &-2 {
+      justify-content: flex-end;
+      @include adaptive(767) {
+        flex-direction: column-reverse;
+      }
+
+      .advantage__block {
+        &-image {
+          max-width: 755px;
+          min-height: 742px;
+          @include adaptive(767) {
+            min-height: 442px;
+          }
+        }
+
+        &-body {
+          transform: translate(185px, 155px);
+          max-width: 643px;
+          background: #fafafa;
+          @include adaptive(1279) {
+            transform: translate(120px, 125px);
+          }
+          @include adaptive(1023) {
+            transform: translate(50px, 125px);
+          }
+          @include adaptive(767) {
+            max-width: 95%;
+            margin-right: auto;
+            transform: translate(0px, -125px);
+          }
+        }
+      }
+    }
+
+    &-image {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+
+      img {
+        @extend %imageResCoverAbs;
+      }
+    }
+
+    &-body {
+      z-index: 2;
+      position: relative;
+      width: 100%;
+      padding: 80px 75px 90px 70px;
+      @include adaptive(1365) {
+        padding: 50px 45px 60px 40px;
+      }
+      @include adaptive(767) {
+        padding: 30px 25px 40px 20px;
+      }
+    }
+
+    &-col {
+      padding-left: 68px;
+      @include adaptive(767) {
+        padding-left: 50px;
+      }
+    }
+
+    &-title {
+      padding-bottom: 30px;
+      line-height: 1.2;
+    }
+
+    &-desc {
+      padding-bottom: 25px;
+    }
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      padding-bottom: 32px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      padding-right: 35px;
+      padding-bottom: 12px;
+
+      > div {
+        &:nth-of-type(1) {
+          width: 30px;
+        }
+        &:nth-of-type(2) {
+          flex: 1;
+          min-width: 1px;
+          max-width: 100%;
+        }
+
+        .icon-font {
+          color: #002a36;
+          font-size: 18px;
+        }
+
+        p {
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 28px;
+          color: #002a36;
+          @include adaptive(767) {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    &-btn {
+      width: 100%;
+      max-width: 242px;
+    }
+  }
+}
+
+// SECTION advantage :: END
