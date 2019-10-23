@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="153" viewBox="0 0 200 153">
+  <defs>
+    <filter id="dropdown-corner" x="0" y="0" width="200" height="153" filterUnits="userSpaceOnUse">
+      <feOffset dy="-10" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="23" result="blur"/>
+      <feFlood flood-opacity="0.059"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#dropdown-corner)">
+    <path id="dropdown-corner-2" data-name="dropdown-corner" d="M31,0,62,15H0Z" transform="translate(69 79)" fill="#002a36"/>
+  </g>
+</svg>

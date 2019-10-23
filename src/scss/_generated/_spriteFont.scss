@@ -27,20 +27,29 @@
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == arrow {
+	@if $filename == about {
 		$char: "\E001";
 	}
-	@if $filename == facebook {
+	@if $filename == arrow {
 		$char: "\E002";
 	}
-	@if $filename == instagram {
+	@if $filename == careers {
 		$char: "\E003";
 	}
-	@if $filename == mac {
+	@if $filename == contact {
 		$char: "\E004";
 	}
-	@if $filename == phone {
+	@if $filename == facebook {
 		$char: "\E005";
+	}
+	@if $filename == instagram {
+		$char: "\E006";
+	}
+	@if $filename == mac {
+		$char: "\E007";
+	}
+	@if $filename == phone {
+		$char: "\E008";
 	}
 
 	@return $char;
@@ -57,8 +66,20 @@
 	}
 }
 
+.icon-about {
+	@include icon(about);
+
+}
 .icon-arrow {
 	@include icon(arrow);
+
+}
+.icon-careers {
+	@include icon(careers);
+
+}
+.icon-contact {
+	@include icon(contact);
 
 }
 .icon-facebook {

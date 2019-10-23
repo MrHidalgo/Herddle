@@ -16,6 +16,52 @@
 * */
 
 /**
+ * @name initHamburger
+ *
+ * @description Init hamburger logic with animated
+ */
+var initHamburger = function initHamburger() {
+
+  var btn = document.querySelector("[hamburger-js]"),
+      hideScrollContainer = document.querySelectorAll("html, body"),
+      mobileContainer = document.querySelector("[mobile-block-js]");
+
+  /**
+    * @description
+   */
+  if (btn) {
+    btn.addEventListener("click", function (ev) {
+      var elem = ev.currentTarget;
+
+      elem.classList.toggle("is-active");
+      mobileContainer.classList.toggle("is-open");
+      $('.header').toggleClass('is-open');
+
+      hideScrollContainer.forEach(function (val, idx) {
+        val.classList.toggle("is-hideScroll");
+      });
+    });
+  }
+};
+
+/**
+ * @name initHeaderFixed
+ *
+ * @description Fixing the site header in the scrolling page.
+ */
+var initHeaderFixed = function initHeaderFixed() {
+
+  var countScroll = $(window).scrollTop(),
+      headerElement = $('.header');
+
+  if (countScroll > 10) {
+    headerElement.addClass("header--fixed");
+  } else {
+    headerElement.removeClass("header--fixed");
+  }
+};
+
+/**
  * @name initPreventBehavior
  *
  * @description
@@ -67,6 +113,25 @@ var initSwiper = function initSwiper() {
 };
 
 /**
+ * @description Window on load.
+ */
+$(window).on("load", function (ev) {
+  initHeaderFixed();
+});
+
+/**
+ * @description Window on resize.
+ */
+$(window).on("resize", function (ev) {});
+
+/**
+ * @description Window on scroll.
+ */
+$(window).on("scroll", function (ev) {
+  initHeaderFixed();
+});
+
+/**
  * @description Document DOM ready.
  */
 $(document).ready(function (ev) {
@@ -97,6 +162,7 @@ $(document).ready(function (ev) {
 
     // lib
     initSwiper();
+    initHamburger();
     // ==========================================
 
     // callback
