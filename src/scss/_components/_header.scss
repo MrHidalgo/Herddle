@@ -80,12 +80,17 @@
   &__grid {
     width: 100%;
     max-width: 1560px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
     margin-left: auto;
     margin-right: auto;
     @include adaptive(1279) {
-      padding-right: 0;
+      //padding-right: 0;
+      padding-right: 15px;
+    }
+    @include adaptive(767) {
+      padding-left: 15px;
+      padding-right: 15px;
     }
   }
 
@@ -171,10 +176,13 @@
         height: calc(100% - 90px);
         padding: 50px;
         border-top: 1px solid #002A36;
-        background-color: #001d25;
+        background-color: rgba(#001d25, 0.975);
         @include adaptive(1279) {
           &.is-open {
             display: block;
+            animation-fill-mode: both;
+            animation-duration: 0.5s;
+            animation-name: zoomIn;
           }
         }
         @include adaptive(767) {
@@ -475,6 +483,54 @@
       margin-left: 20px;
     }
   }
+}
+@keyframes slideIn {
+  0% {
+    transform: translate3d(-50%, 75px, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translate3d(-50%, 30px, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.zoomOut {
+  animation-fill-mode: both;
+  animation-duration: 0.5s;
+  animation-name: zoomOut !important;
+}
+
+.animate {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+.slideIn {
+  animation-name: slideIn;
 }
 
 // HEADER :: END

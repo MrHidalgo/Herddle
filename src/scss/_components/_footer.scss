@@ -17,8 +17,7 @@
       align-items: center;
       justify-content: space-between;
       min-height: 110px;
-      padding-top: 30px;
-      padding-bottom: 30px;
+      padding: 30px;
       @include adaptive(767) {
         flex-direction: column;
         justify-content: center;
@@ -159,6 +158,7 @@
     }
 
     &-link {
+      position: relative;
       display: flex;
       font-weight: 300;
       font-size: 16px;
@@ -169,8 +169,31 @@
       }
 
       &:hover {
-        color: #00abdb;
-        @include transition(color);
+        color: #002a36;
+
+        &:before,
+        &:after {
+          width: 50%;
+          @include transition(width);
+        }
+      }
+
+      &:after,
+      &:before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: 0;
+        background-color: #002a36;
+        @include transition(width);
+      }
+
+      &:after {
+        left: 50%;
+      }
+      &:before {
+        right: 50%;
       }
     }
   }

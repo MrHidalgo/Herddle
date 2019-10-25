@@ -57,7 +57,7 @@
                   <li class="header__nav-item"><a class="header__nav-link" href="#" title="">Institutional Investors</a></li>
                   <li class="header__nav-item header__nav-item--drop">
                     <div class="dropdown"><a class="header__nav-link dropdown-toggle" id="otherSolutionDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Other solutions</a>
-                      <div class="dropdown-menu" aria-labelledby="otherSolutionDrop"><a class="dropdown-item" href="#">Letting & Property Management</a><a class="dropdown-item" href="#">Block Management</a><a class="dropdown-item" href="#">Social Housing Providers</a><a class="dropdown-item" href="#">Residents</a><a class="dropdown-item" href="#">Contractors</a></div>
+                      <div class="dropdown-menu animate slideIn" aria-labelledby="otherSolutionDrop"><a class="dropdown-item" href="#">Letting & Property Management</a><a class="dropdown-item" href="#">Block Management</a><a class="dropdown-item" href="#">Social Housing Providers</a><a class="dropdown-item" href="#">Residents</a><a class="dropdown-item" href="#">Contractors</a></div>
                     </div>
                   </li>
                 </ul>
@@ -74,7 +74,7 @@
                 <ul class="header__nav header__nav-2">
                   <li class="header__nav-item header__nav-item--drop">
                     <div class="dropdown"><a class="header__nav-link dropdown-toggle" id="companyDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Company</a>
-                      <div class="dropdown-menu" aria-labelledby="companyDrop"><a class="dropdown-item" href="#" title="">
+                      <div class="dropdown-menu animate slideIn" aria-labelledby="companyDrop"><a class="dropdown-item" href="#" title="">
                           <div><img src="img/about.svg"></div>
                           <div><span>About</span></div></a><a class="dropdown-item" href="#" title="">
                           <div><i class="icon-font icon-careers"></i></div>
@@ -129,42 +129,42 @@
         <div class="team__wrapper">
           <h2 class="team__title c-title">Our Humans</h2>
           <div class="team__block-wrapper">
-            <div><a class="team__block" href="#" title="">
+            <div><a class="team__block" href="#" title="" data-toggle="modal" data-target="#teamDescription">
                 <div class="team__block-image"><img src="img/img-team-1.jpg" srcset="img/img-team-1@2x.jpg 2x"></div>
                 <div class="team__block-body">
                   <p>Samantha Willkinson</p><span>Project Manager</span>
                 </div></a></div>
-            <div><a class="team__block" href="#" title="">
+            <div><a class="team__block" href="#" title="" data-toggle="modal" data-target="#teamDescription">
                 <div class="team__block-image"><img src="img/img-team-2.jpg" srcset="img/img-team-2@2x.jpg 2x"></div>
                 <div class="team__block-body">
                   <p>Charlie Peterson</p><span>Founder & CEO</span>
                 </div></a></div>
-            <div><a class="team__block" href="#" title="">
+            <div><a class="team__block" href="#" title="" data-toggle="modal" data-target="#teamDescription">
                 <div class="team__block-image"><img src="img/img-team-1.jpg" srcset="img/img-team-1@2x.jpg 2x"></div>
                 <div class="team__block-body">
                   <p>Samantha Willkinson</p><span>Project Manager</span>
                 </div></a></div>
-            <div><a class="team__block" href="#" title="">
+            <div><a class="team__block" href="#" title="" data-toggle="modal" data-target="#teamDescription">
                 <div class="team__block-image"><img src="img/img-team-2.jpg" srcset="img/img-team-2@2x.jpg 2x"></div>
                 <div class="team__block-body">
                   <p>Charlie Peterson</p><span>Founder & CEO</span>
                 </div></a></div>
-            <div><a class="team__block" href="#" title="">
+            <div><a class="team__block" href="#" title="" data-toggle="modal" data-target="#teamDescription">
                 <div class="team__block-image"><img src="img/img-team-1.jpg" srcset="img/img-team-1@2x.jpg 2x"></div>
                 <div class="team__block-body">
                   <p>Samantha Willkinson</p><span>Project Manager</span>
                 </div></a></div>
-            <div><a class="team__block" href="#" title="">
+            <div><a class="team__block" href="#" title="" data-toggle="modal" data-target="#teamDescription">
                 <div class="team__block-image"><img src="img/img-team-2.jpg" srcset="img/img-team-2@2x.jpg 2x"></div>
                 <div class="team__block-body">
                   <p>Charlie Peterson</p><span>Founder & CEO</span>
                 </div></a></div>
-            <div><a class="team__block" href="#" title="">
+            <div><a class="team__block" href="#" title="" data-toggle="modal" data-target="#teamDescription">
                 <div class="team__block-image"><img src="img/img-team-1.jpg" srcset="img/img-team-1@2x.jpg 2x"></div>
                 <div class="team__block-body">
                   <p>Samantha Willkinson</p><span>Project Manager</span>
                 </div></a></div>
-            <div><a class="team__block" href="#" title="">
+            <div><a class="team__block" href="#" title="" data-toggle="modal" data-target="#teamDescription">
                 <div class="team__block-image"><img src="img/img-team-2.jpg" srcset="img/img-team-2@2x.jpg 2x"></div>
                 <div class="team__block-body">
                   <p>Charlie Peterson</p><span>Founder & CEO</span>
@@ -333,6 +333,24 @@
       </div>
     </footer>
     <!-- FOOTER :: END-->
+    <!-- SECTION :: START-->
+    <div class="modal fade" id="teamDescription" tabindex="-1" role="dialog" aria-labelledby="teamDescriptionLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="teamDescriptionLabel">Samantha Willkinson</h5>
+            <p class="modal-subtitle">Project Manager</p>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SECTION :: END-->
   </body>
   <!-- SCRIPT :: START-->
   <script src="js/vendor.js"></script>

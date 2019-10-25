@@ -24,7 +24,7 @@ var initHamburger = function initHamburger() {
 
   var btn = document.querySelector("[hamburger-js]"),
       hideScrollContainer = document.querySelectorAll("html, body"),
-      mobileContainer = document.querySelector("[mobile-block-js]");
+      mobileContainer = $("[mobile-block-js]");
 
   /**
     * @description
@@ -34,7 +34,17 @@ var initHamburger = function initHamburger() {
       var elem = ev.currentTarget;
 
       elem.classList.toggle("is-active");
-      mobileContainer.classList.toggle("is-open");
+
+      if (mobileContainer.hasClass('is-open')) {
+        mobileContainer.addClass("zoomOut");
+
+        setTimeout(function () {
+          mobileContainer.removeClass("is-open");
+        }, 500);
+      } else {
+        mobileContainer.removeClass("zoomOut").addClass("is-open");
+      }
+
       $('.header').toggleClass('is-open');
 
       hideScrollContainer.forEach(function (val, idx) {

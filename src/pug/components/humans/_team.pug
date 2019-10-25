@@ -9,14 +9,14 @@ section#team.team
     .team__block-wrapper
       each val, idx in [1,2,3,4]
         div
-          a.team__block(href='#' title='')
+          a.team__block(href='#' title='' data-toggle="modal" data-target="#teamDescription")
             .team__block-image
               img(src='img/img-team-1.jpg' srcset='img/img-team-1@2x.jpg 2x')
             .team__block-body
               p Samantha Willkinson
               span Project Manager
         div
-          a.team__block(href='#' title='')
+          a.team__block(href='#' title='' data-toggle="modal" data-target="#teamDescription")
             .team__block-image
               img(src='img/img-team-2.jpg' srcset='img/img-team-2@2x.jpg 2x')
             .team__block-body

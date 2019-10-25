@@ -34,7 +34,7 @@ header#header.header(class!= (headerMod)?'header--dark':'')
                 .dropdown
                   a#otherSolutionDrop.header__nav-link.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
                     | Other solutions
-                  .dropdown-menu(aria-labelledby='otherSolutionDrop')
+                  .dropdown-menu.animate.slideIn(aria-labelledby='otherSolutionDrop')
                     a.dropdown-item(href='#') Letting & Property Management
                     a.dropdown-item(href='#') Block Management
                     a.dropdown-item(href='#') Social Housing Providers
@@ -81,7 +81,7 @@ header#header.header(class!= (headerMod)?'header--dark':'')
                 .dropdown
                   a#companyDrop.header__nav-link.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
                     | Company
-                  .dropdown-menu(aria-labelledby='companyDrop')
+                  .dropdown-menu.animate.slideIn(aria-labelledby='companyDrop')
                     a.dropdown-item(href='#' title='')
                       div
                         img(src='img/about.svg')

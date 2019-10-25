@@ -74,6 +74,44 @@
 }
 // form :: end
 
+// modal
+.modal {
+  &-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  &-title {
+    font-size: 24px;
+  }
+
+  &-subtitle {
+    font-size: 20px;
+  }
+
+  &-body {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    p {
+      padding-bottom: 15px;
+      font-size: 16px;
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+  }
+}
+// modal :: end
+
 // copyright
 .copyright {
   text-align: center;
