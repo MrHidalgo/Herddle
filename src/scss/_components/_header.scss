@@ -177,18 +177,22 @@
         padding: 50px;
         border-top: 1px solid #002A36;
         background-color: rgba(#001d25, 0.975);
-        @include adaptive(1279) {
-          &.is-open {
-            display: block;
-            animation-fill-mode: both;
-            animation-duration: 0.5s;
-            animation-name: zoomIn;
-          }
+
+        &.is-open {
+          display: block;
+          animation-fill-mode: both;
+          animation-duration: 0.45s;
+          animation-name: zoomIn;
         }
-        @include adaptive(767) {
-          top: 60px;
-          height: calc(100% - 60px);
-          padding: 30px;
+      }
+      @include adaptive(767) {
+        top: 60px;
+        height: calc(100% - 60px);
+        padding: 30px;
+
+        &.is-open {
+          display: block;
+          animation-name: slideInDown;
         }
       }
 
@@ -505,6 +509,16 @@
     opacity: 1;
   }
 }
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: scale3d(1,1,1) translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: scale3d(1,1,1) translate3d(0, 0, 0);
+  }
+}
 @keyframes zoomOut {
   from {
     opacity: 1;
@@ -520,12 +534,12 @@
 
 .zoomOut {
   animation-fill-mode: both;
-  animation-duration: 0.5s;
+  animation-duration: 0.45s;
   animation-name: zoomOut !important;
 }
 
 .animate {
-  animation-duration: 0.5s;
+  animation-duration: 0.45s;
   animation-fill-mode: both;
 }
 
