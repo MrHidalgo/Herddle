@@ -27,7 +27,7 @@ PageList:
   ready: 90
 - file: property.html
   titleName: The Property Digest
-  ready: 1
+  ready: 90
 - file: property-inner.html
   titleName: Why --- are the future?
   ready: 1

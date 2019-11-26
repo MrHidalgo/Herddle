@@ -21,7 +21,6 @@
 	&__title {
 		padding-bottom: 30px;
 		@extend %fontBigCaslon;
-		font-weight: 500;
 		font-size: 77px;
 		color: #002A36;
 		@include adaptive(1365) {
@@ -80,6 +79,7 @@
 		border: none;
 		border-radius: 0;
 		box-shadow: none;
+		background-color: transparent;
 		@include transition(transform);
 		@include adaptive(575) {
 			margin-left: -15px;
@@ -120,8 +120,8 @@
 		}
 
 		&-title {
+			margin: 0;
 			@extend %fontBigCaslon;
-			font-weight: 500;
 			font-size: 33px;
 			color: #002A36;
 			@include adaptive(1279) {

@@ -1,0 +1,218 @@
+// SECTION property :: START
+
+.property {
+	position: relative;
+	padding-top: 175px;
+	padding-bottom: 100px;
+	@include adaptive(767) {
+		padding-top: 155px;
+	}
+	@include adaptive(575) {
+		padding-top: 135px;
+		padding-bottom: 75px;
+	}
+
+	&__bg {
+		position: absolute;
+		top: 271px;
+		left: 0;
+		right: 0;
+		width: 100%;
+		max-width: 1531px;
+		height: 488px;
+		margin-left: auto;
+		margin-right: auto;
+		background: rgba(#F6ED02, 0.11);
+	}
+
+	&__wrapper {
+		z-index: 2;
+		position: relative;
+		max-width: 1187px;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__title {
+		width: 100%;
+		max-width: 647px;
+		padding-bottom: 75px;
+
+		h1,
+		p {
+			line-height: 1.2;
+			display: inline-block;
+		}
+
+		h1 {
+			@extend %fontBigCaslon;
+			font-size: 77px;
+			color: #002A36;
+			text-transform: uppercase;
+			@include adaptive(1365) {
+				font-size: 70px;
+			}
+			@include adaptive(1279) {
+				font-size: 65px;
+			}
+			@include adaptive(767) {
+				font-size: 55px;
+			}
+			@include adaptive(575) {
+				font-size: 45px;
+				display: block;
+				text-align: center;
+			}
+			@include adaptive(374) {
+				font-size: 36px;
+			}
+		}
+
+		p {
+			width: 100%;
+			max-width: 206px;
+			padding-left: 30px;
+			font-size: 13px;
+			color: rgba(#002A36, 0.6);
+			letter-spacing: 0.17px;
+			@include adaptive(575) {
+				display: block;
+				padding-top: 15px;
+				padding-left: 0;
+				margin-left: auto;
+				margin-right: auto;
+				text-align: center;
+			}
+		}
+	}
+
+	&__box {
+		&-wrapper {
+			position: relative;
+			left: -38px;
+			display: flex;
+			flex-wrap: wrap;
+			width: calc(100% + 38px);
+			@include adaptive(767) {
+				left: -30px;
+				width: calc(100% + 30px);
+			}
+			@include adaptive(575) {
+				left: 0;
+				width: 100%;
+			}
+
+			> div {
+				width: 100%;
+				max-width: calc(100% / 3);
+				padding-left: 38px;
+				padding-bottom: 73px;
+				@include adaptive(767) {
+					padding-left: 30px;
+					max-width: calc(100% / 2);
+					padding-bottom: 50px;
+				}
+				@include adaptive(575) {
+					padding-left: 0;
+					max-width: 100%;
+				}
+			}
+		}
+	}
+
+	.card {
+		background-color: transparent;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+		@include transition(transform 0.75s);
+		@include adaptive(575) {
+			margin-left: -15px;
+			width: calc(100% + 30px);
+		}
+
+		&:hover {
+			transform: translateY(-20px);
+			@include transition(transform 0.5s);
+
+			.card__image {
+				img {
+					transform: scale(1.1);
+					@include transition(transform 0.5s);
+				}
+			}
+		}
+
+		&__image {
+			overflow: hidden;
+			position: relative;
+			height: 360px;
+			@include adaptive(1279) {
+				height: 300px;
+			}
+			@include adaptive(1023) {
+				height: 240px;
+			}
+
+			img {
+				@extend %imageResCoverAbs;
+				@include transition(transform 0.75s);
+			}
+		}
+
+		&-body {
+			padding: 0;
+			padding-top: 26px;
+			@include adaptive(575) {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+
+		&-title {
+			padding-bottom: 13px;
+			margin: 0;
+			@extend %fontBigCaslon;
+			font-size: 33px;
+			color: #002A36;
+			@include adaptive(1279) {
+				font-size: 30px;
+			}
+			@include adaptive(1023) {
+				font-size: 27px;
+			}
+			@include adaptive(767) {
+				font-size: 23px;
+			}
+			@include adaptive(575) {
+				font-size: 21px;
+			}
+			@include adaptive(374) {
+				font-size: 18px;
+			}
+		}
+
+		&-info {
+			padding-left: 15px;
+			font-weight: 300;
+			font-size: 18px;
+			color: #002A36;
+			line-height: 28px;
+
+			&:before {
+				content: '';
+				position: relative;
+				left: -15px;
+				display: inline-block;
+				vertical-align: middle;
+				width: 15px;
+				height: 1px;
+				background-color: #002A36;
+			}
+		}
+	}
+}
+
+// SECTION property :: END

@@ -1,0 +1,37 @@
+// SECTION property :: START
+
+section#property.property
+
+	.property__bg
+
+	.property__wrapper
+
+		.property__title
+			h1 THE PROPERTY
+			h1 DIGEST
+			p Your weekly dose of property market insights by Herddle.
+
+		.property__box-wrapper
+			each val, idx in [1,2,3,4,5,6,7,8]
+				div
+					a.card(href='#' title='')
+						.card__image
+							if(idx === 0 || idx === 3 || idx === 6)
+								img.card-img-top(src='img/img-property-0.jpg')
+							else if (idx === 1 || idx === 4 || idx === 7)
+								img.card-img-top(src='img/img-property-1.jpg')
+							else if (idx === 2 || idx === 5)
+								img.card-img-top(src='img/img-property-2.jpg')
+
+						.card-body
+							if(idx === 0 || idx === 3 || idx === 6)
+								h5.card-title UK retail crisis slashes 10% off British Land property values
+								p.card-info 3 min read
+							else if (idx === 1 || idx === 4 || idx === 7)
+								h5.card-title Homeowners won’t have properties protected by airport noise pilot scheme
+								p.card-info 4 min read
+							else if (idx === 2 || idx === 5)
+								h5.card-title Why property disruptors are the future?
+								p.card-info 5 min read
+
+// SECTION property :: END
