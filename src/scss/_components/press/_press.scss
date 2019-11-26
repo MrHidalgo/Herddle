@@ -1,0 +1,146 @@
+// SECTION press :: START
+
+.press {
+	padding-top: 175px;
+	padding-bottom: 27px;
+	@include adaptive(767) {
+		padding-top: 155px;
+	}
+	@include adaptive(575) {
+		padding-top: 135px;
+	}
+
+	&__wrapper {
+		max-width: 1187px;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__title {
+		padding-bottom: 30px;
+		@extend %fontBigCaslon;
+		font-weight: 500;
+		font-size: 77px;
+		color: #002A36;
+		@include adaptive(1365) {
+			font-size: 70px;
+		}
+		@include adaptive(1279) {
+			font-size: 65px;
+		}
+		@include adaptive(767) {
+			font-size: 55px;
+		}
+		@include adaptive(575) {
+			font-size: 50px;
+			text-align: center;
+		}
+		@include adaptive(374) {
+			font-size: 40px;
+		}
+	}
+
+	&__box {
+		&-wrapper {
+			position: relative;
+			left: -38px;
+			display: flex;
+			flex-wrap: wrap;
+			width: calc(100% + 38px);
+			@include adaptive(767) {
+				left: -30px;
+				width: calc(100% + 30px);
+			}
+			@include adaptive(575) {
+				left: 0;
+				width: 100%;
+			}
+
+			> div {
+				width: 100%;
+				max-width: calc(100% / 3);
+				padding-left: 38px;
+				padding-bottom: 73px;
+				@include adaptive(767) {
+					padding-left: 30px;
+					max-width: calc(100% / 2);
+					padding-bottom: 50px;
+				}
+				@include adaptive(575) {
+					padding-left: 0;
+					max-width: 100%;
+				}
+			}
+		}
+	}
+
+	.card {
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+		@include transition(transform);
+		@include adaptive(575) {
+			margin-left: -15px;
+			width: calc(100% + 30px);
+		}
+
+		&:hover {
+			transform: translateY(-20px);
+			@include transition(transform);
+		}
+
+		&__image {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 162px;
+			background-color: #e6fcff;
+
+			img {
+				display: block;
+				max-width: 100%;
+				max-height: 100%;
+				margin: auto;
+
+				width: auto;
+				border-radius: 0;
+			}
+		}
+
+		&-body {
+			padding: 0;
+			padding-top: 26px;
+			@include adaptive(575) {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+
+		&-title {
+			@extend %fontBigCaslon;
+			font-weight: 500;
+			font-size: 33px;
+			color: #002A36;
+			@include adaptive(1279) {
+				font-size: 30px;
+			}
+			@include adaptive(1023) {
+				font-size: 27px;
+			}
+			@include adaptive(767) {
+				font-size: 23px;
+			}
+			@include adaptive(575) {
+				font-size: 21px;
+			}
+			@include adaptive(374) {
+				font-size: 18px;
+			}
+		}
+	}
+}
+
+// SECTION press :: END

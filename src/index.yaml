@@ -25,3 +25,12 @@ PageList:
 - file: contact-us.html
   titleName: Contact Us
   ready: 90
+- file: property.html
+  titleName: The Property Digest
+  ready: 1
+- file: property-inner.html
+  titleName: Why --- are the future?
+  ready: 1
+- file: press.html
+  titleName: Press
+  ready: 90

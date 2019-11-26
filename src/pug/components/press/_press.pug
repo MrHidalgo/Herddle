@@ -1,0 +1,24 @@
+// SECTION press :: START
+
+section#press.press
+
+	.press__wrapper
+
+		h1.press__title Press
+
+		.press__box-wrapper
+			each val, idx in [1,2,3,4,5]
+				div
+					a.card(href='#' title='')
+						.card__image
+							img.card-img-top(src='img/img-press.png', srcset='img/img-press@2x.png 2x')
+
+						.card-body
+							if(idx === 0 || idx === 3)
+								h5.card-title UK retail crisis slashes 10% off British Land property values
+							else if (idx === 1 || idx === 4)
+								h5.card-title Homeowners won’t have properties protected by airport noise pilot scheme
+							else if (idx === 2)
+								h5.card-title Why property disruptors are the future?
+
+// SECTION press :: END
