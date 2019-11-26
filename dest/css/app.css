@@ -1,11 +1,11 @@
 @charset "UTF-8";
 /* line 6, src/scss/_utilities/_extend.scss */
-.c-title, .navigation__link-title, .review__text, .testimonials__text, .flow__title, .description__text, .description__item, .definition__title, .solutions__block p, .how__title, .command__block-title, .comment__quote, .comment__text, .property__title h1, .property .card-title, .press__title, .press .card-title {
+.c-title, .navigation__link-title, .review__text, .testimonials__text, .flow__title, .description__text, .description__item, .definition__title, .solutions__block p, .how__title, .command__block-title, .comment__quote, .comment__text, .property__title h1, .property .card-title, .specification__content > h1, .specification__content > h2, .specification__other .card-title, .press__title, .press .card-title {
   font-family: 'BigCaslon', 'ProximaNova', sans-serif;
 }
 
 /* line 22, src/scss/_utilities/_extend.scss */
-.most-main__img img, .humans-main__img img, .team__block-image img, .advantage__block-image img, .command__block-image img, .property .card__image img {
+.most-main__img img, .humans-main__img img, .team__block-image img, .advantage__block-image img, .command__block-image img, .property .card__image img, .specification__image img, .specification__other .card__image img {
   position: absolute;
   top: 0;
   left: 0;
@@ -6610,21 +6610,28 @@ picture {
   transition: transform 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
 }
 
-/* line 165, src/scss/_components/property/_property.scss */
+@media screen and (max-width: 767px) {
+  /* line 159, src/scss/_components/property/_property.scss */
+  .property .card__image img {
+    max-width: unset;
+  }
+}
+
+/* line 168, src/scss/_components/property/_property.scss */
 .property .card-body {
   padding: 0;
   padding-top: 26px;
 }
 
 @media screen and (max-width: 575px) {
-  /* line 165, src/scss/_components/property/_property.scss */
+  /* line 168, src/scss/_components/property/_property.scss */
   .property .card-body {
     padding-left: 15px;
     padding-right: 15px;
   }
 }
 
-/* line 174, src/scss/_components/property/_property.scss */
+/* line 177, src/scss/_components/property/_property.scss */
 .property .card-title {
   padding-bottom: 13px;
   margin: 0;
@@ -6633,41 +6640,41 @@ picture {
 }
 
 @media screen and (max-width: 1279px) {
-  /* line 174, src/scss/_components/property/_property.scss */
+  /* line 177, src/scss/_components/property/_property.scss */
   .property .card-title {
     font-size: 30px;
   }
 }
 
 @media screen and (max-width: 1023px) {
-  /* line 174, src/scss/_components/property/_property.scss */
+  /* line 177, src/scss/_components/property/_property.scss */
   .property .card-title {
     font-size: 27px;
   }
 }
 
 @media screen and (max-width: 767px) {
-  /* line 174, src/scss/_components/property/_property.scss */
+  /* line 177, src/scss/_components/property/_property.scss */
   .property .card-title {
     font-size: 23px;
   }
 }
 
 @media screen and (max-width: 575px) {
-  /* line 174, src/scss/_components/property/_property.scss */
+  /* line 177, src/scss/_components/property/_property.scss */
   .property .card-title {
     font-size: 21px;
   }
 }
 
 @media screen and (max-width: 374px) {
-  /* line 174, src/scss/_components/property/_property.scss */
+  /* line 177, src/scss/_components/property/_property.scss */
   .property .card-title {
     font-size: 18px;
   }
 }
 
-/* line 197, src/scss/_components/property/_property.scss */
+/* line 200, src/scss/_components/property/_property.scss */
 .property .card-info {
   padding-left: 15px;
   font-weight: 300;
@@ -6676,8 +6683,419 @@ picture {
   line-height: 28px;
 }
 
-/* line 204, src/scss/_components/property/_property.scss */
+/* line 207, src/scss/_components/property/_property.scss */
 .property .card-info:before {
+  content: '';
+  position: relative;
+  left: -15px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 1px;
+  background-color: #002A36;
+}
+
+/* line 3, src/scss/_components/property/_specification.scss */
+.specification {
+  padding-top: 159px;
+  padding-bottom: 169px;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 3, src/scss/_components/property/_specification.scss */
+  .specification {
+    padding-bottom: 130px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 3, src/scss/_components/property/_specification.scss */
+  .specification {
+    padding-top: 60px;
+  }
+}
+
+/* line 13, src/scss/_components/property/_specification.scss */
+.specification__wrapper {
+  width: 100%;
+  max-width: 1312px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 22, src/scss/_components/property/_specification.scss */
+.specification__content {
+  position: relative;
+  width: 100%;
+  max-width: 1007px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 75px 75px;
+  background-color: #FFFFFF;
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 22, src/scss/_components/property/_specification.scss */
+  .specification__content {
+    max-width: 875px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 22, src/scss/_components/property/_specification.scss */
+  .specification__content {
+    padding: 55px 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 22, src/scss/_components/property/_specification.scss */
+  .specification__content {
+    padding: 40px 0;
+  }
+}
+
+/* line 40, src/scss/_components/property/_specification.scss */
+.specification__content > h1 {
+  padding-bottom: 20px;
+  line-height: 1.2;
+  font-size: 67px;
+  color: #002A36;
+  letter-spacing: 0;
+}
+
+@media screen and (max-width: 1365px) {
+  /* line 40, src/scss/_components/property/_specification.scss */
+  .specification__content > h1 {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 40, src/scss/_components/property/_specification.scss */
+  .specification__content > h1 {
+    font-size: 55px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 40, src/scss/_components/property/_specification.scss */
+  .specification__content > h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /* line 40, src/scss/_components/property/_specification.scss */
+  .specification__content > h1 {
+    font-size: 40px;
+  }
+}
+
+/* line 61, src/scss/_components/property/_specification.scss */
+.specification__content > h2 {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: 48px;
+}
+
+@media screen and (max-width: 767px) {
+  /* line 61, src/scss/_components/property/_specification.scss */
+  .specification__content > h2 {
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /* line 61, src/scss/_components/property/_specification.scss */
+  .specification__content > h2 {
+    font-size: 36px;
+  }
+}
+
+/* line 74, src/scss/_components/property/_specification.scss */
+.specification__content > p {
+  padding-bottom: 30px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #002a36;
+}
+
+/* line 81, src/scss/_components/property/_specification.scss */
+.specification__content > span {
+  display: block;
+  padding-left: 15px;
+  padding-bottom: 25px;
+  font-weight: 300;
+  font-size: 18px;
+  color: #002A36;
+  line-height: 28px;
+}
+
+/* line 90, src/scss/_components/property/_specification.scss */
+.specification__content > span:before {
+  content: '';
+  position: relative;
+  left: -15px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 15px;
+  height: 1px;
+  background-color: #002A36;
+}
+
+/* line 103, src/scss/_components/property/_specification.scss */
+.specification__image {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: -webkit-calc(100% + 323px);
+  height: calc(100% + 323px);
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 103, src/scss/_components/property/_specification.scss */
+  .specification__image {
+    position: static;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 103, src/scss/_components/property/_specification.scss */
+  .specification__image {
+    margin-left: -15px;
+    width: -webkit-calc(100% + 30px);
+    width: calc(100% + 30px);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 119, src/scss/_components/property/_specification.scss */
+  .specification__image img {
+    position: static;
+  }
+}
+
+/* line 126, src/scss/_components/property/_specification.scss */
+.specification__image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 535px;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 126, src/scss/_components/property/_specification.scss */
+  .specification__image-wrapper {
+    height: auto;
+  }
+}
+
+/* line 136, src/scss/_components/property/_specification.scss */
+.specification__other {
+  padding-top: 100px;
+}
+
+/* line 139, src/scss/_components/property/_specification.scss */
+.specification__other-title {
+  padding-bottom: 22px;
+  font-weight: 700;
+  font-size: 17px;
+  color: #002A36;
+}
+
+/* line 146, src/scss/_components/property/_specification.scss */
+.specification__other-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 150, src/scss/_components/property/_specification.scss */
+.specification__other-box > div {
+  width: 100%;
+  padding-bottom: 55px;
+}
+
+/* line 154, src/scss/_components/property/_specification.scss */
+.specification__other-box > div:last-of-type {
+  padding-bottom: 0;
+}
+
+/* line 160, src/scss/_components/property/_specification.scss */
+.specification__other .card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: transparent;
+  border: none;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-transition: -webkit-transform 0.75s ease-in-out;
+  transition: -webkit-transform 0.75s ease-in-out;
+  -o-transition: transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+}
+
+@media screen and (max-width: 424px) {
+  /* line 160, src/scss/_components/property/_specification.scss */
+  .specification__other .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+/* line 173, src/scss/_components/property/_specification.scss */
+.specification__other .card:hover {
+  -webkit-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+/* line 178, src/scss/_components/property/_specification.scss */
+.specification__other .card:hover .card__image img {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+/* line 185, src/scss/_components/property/_specification.scss */
+.specification__other .card__image {
+  overflow: hidden;
+  position: relative;
+  width: 183px;
+  height: 183px;
+}
+
+@media screen and (max-width: 424px) {
+  /* line 185, src/scss/_components/property/_specification.scss */
+  .specification__other .card__image {
+    width: 100%;
+  }
+}
+
+/* line 194, src/scss/_components/property/_specification.scss */
+.specification__other .card__image img {
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  -webkit-transition: -webkit-transform 0.75s ease-in-out;
+  transition: -webkit-transform 0.75s ease-in-out;
+  -o-transition: transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out;
+  transition: transform 0.75s ease-in-out, -webkit-transform 0.75s ease-in-out;
+}
+
+/* line 201, src/scss/_components/property/_specification.scss */
+.specification__other .card-body {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 1px;
+  max-width: 100%;
+  width: auto;
+  padding: 0;
+  padding-left: 40px;
+}
+
+@media screen and (max-width: 424px) {
+  /* line 201, src/scss/_components/property/_specification.scss */
+  .specification__other .card-body {
+    padding-left: 0;
+    padding-top: 26px;
+  }
+}
+
+/* line 214, src/scss/_components/property/_specification.scss */
+.specification__other .card-title {
+  padding-bottom: 10px;
+  margin: 0;
+  font-size: 33px;
+  color: #002A36;
+}
+
+@media screen and (max-width: 1279px) {
+  /* line 214, src/scss/_components/property/_specification.scss */
+  .specification__other .card-title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 214, src/scss/_components/property/_specification.scss */
+  .specification__other .card-title {
+    font-size: 27px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 214, src/scss/_components/property/_specification.scss */
+  .specification__other .card-title {
+    font-size: 23px;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  /* line 214, src/scss/_components/property/_specification.scss */
+  .specification__other .card-title {
+    font-size: 21px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  /* line 214, src/scss/_components/property/_specification.scss */
+  .specification__other .card-title {
+    font-size: 18px;
+  }
+}
+
+/* line 237, src/scss/_components/property/_specification.scss */
+.specification__other .card-info {
+  padding-left: 15px;
+  font-weight: 300;
+  font-size: 18px;
+  color: #002A36;
+  line-height: 28px;
+}
+
+/* line 244, src/scss/_components/property/_specification.scss */
+.specification__other .card-info:before {
   content: '';
   position: relative;
   left: -15px;

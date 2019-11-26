@@ -1,0 +1,48 @@
+// SECTION specification :: START
+
+section#specification.specification
+	.specification__wrapper
+
+		.specification__image-wrapper
+			.specification__image
+				img(src='img/img-property-inner.jpg' alt='')
+
+		.specification__content
+			h1 Why property disruptors are the future?
+			span 3 min read
+
+			p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet aliquam id diam maecenas. Sodales ut eu sem integer. Vel eros donec ac odio tempor. Maecenas accumsan lacus vel facilisis volutpat. Neque aliquam vestibulum morbi blandit cursus risus. Nunc sed velit dignissim sodales ut eu sem integer vitae. Id semper risus in hendrerit gravida. Integer quis auctor elit sed vulputate mi sit. In arcu cursus euismod quis viverra nibh cras pulvinar. A lacus vestibulum sed arcu non odio euismod lacinia. Risus ultricies tristique nulla aliquet enim tortor. Semper feugiat nibh sed pulvinar proin.
+			p Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a. Condimentum mattis pellentesque id nibh tortor. Ornare arcu dui vivamus arcu. Vel facilisis volutpat est velit egestas dui id ornare. Mauris a diam maecenas sed enim ut. Dictum at tempor commodo ullamcorper a lacus. Quis blandit turpis cursus in hac habitasse. Pellentesque elit eget gravida cum sociis natoque penatibus. Neque gravida in fermentum et sollicitudin ac orci. Pellentesque dignissim enim sit amet venenatis urna cursus. Massa enim nec dui nunc mattis enim. Dictum non consectetur a erat nam. Vitae et leo duis ut diam quam. Dictum varius duis at consectetur lorem. Lectus urna duis convallis convallis. Tristique nulla aliquet enim tortor at auctor. Morbi tristique senectus et netus et malesuada fames ac.
+
+			h2 Sample Subtitle
+
+			p Nisl condimentum id venenatis a. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate sapien. Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Felis eget velit aliquet sagittis id consectetur purus ut faucibus. Duis ut diam quam nulla porttitor massa id neque aliquam. Mi quis hendrerit dolor magna eget. In nulla posuere sollicitudin aliquam ultrices sagittis orci a scelerisque. Sed odio morbi quis commodo odio aenean sed adipiscing diam. Massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada. Aliquam ultrices sagittis orci a. Faucibus interdum posuere lorem ipsum dolor sit amet consectetur. Aenean pharetra magna ac placerat vestibulum. Pretium aenean pharetra magna ac placerat. Eleifend donec pretium vulputate sapien.
+			p Consequat nisl vel pretium lectus quam id leo in. Aliquet eget sit amet tellus cras. Amet justo donec enim diam. Eu feugiat pretium nibh ipsum consequat nisl vel pretium lectus. Vel quam elementum pulvinar etiam non. Semper viverra nam libero justo. Cras tincidunt lobortis feugiat vivamus.
+
+			.specification__other
+				p.specification__other-title Other articles:
+
+				.specification__other-box
+					each val, idx in [1,2,3]
+						div
+							a.card(href='#' title='')
+								.card__image
+									if(idx === 0)
+										img.card-img-top(src='img/img-property-0.jpg')
+									else if (idx === 1)
+										img.card-img-top(src='img/img-property-1.jpg')
+									else
+										img.card-img-top(src='img/img-property-2.jpg')
+
+								.card-body
+									if(idx === 0)
+										h5.card-title UK retail crisis slashes 10% off British Land property values
+										p.card-info 3 min read
+									else if (idx === 1)
+										h5.card-title Homeowners won’t have properties protected by airport noise pilot scheme
+										p.card-info 4 min read
+									else
+										h5.card-title Why property disruptors are the future?
+										p.card-info 5 min read
+
+// SECTION specification :: END

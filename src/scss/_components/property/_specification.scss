@@ -1,0 +1,259 @@
+// SECTION specification :: START
+
+.specification {
+	padding-top: 159px;
+	padding-bottom: 169px;
+	@include adaptive(1023) {
+		padding-bottom: 130px;
+	}
+	@include adaptive(767) {
+		padding-top: 60px;
+	}
+
+	&__wrapper {
+		width: 100%;
+		max-width: 1312px;
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__content {
+		position: relative;
+		width: 100%;
+		max-width: 1007px;
+		margin-left: auto;
+		margin-right: auto;
+		padding: 75px 75px;
+		background-color: #FFFFFF;
+		@include adaptive(1279) {
+			max-width: 875px;
+		}
+		@include adaptive(1023) {
+			padding: 55px 40px;
+		}
+		@include adaptive(767) {
+			padding: 40px 0;
+		}
+
+		> h1 {
+			padding-bottom: 20px;
+			line-height: 1.2;
+			@extend %fontBigCaslon;
+			font-size: 67px;
+			color: #002A36;
+			letter-spacing: 0;
+			@include adaptive(1365) {
+				font-size: 60px;
+			}
+			@include adaptive(1279) {
+				font-size: 55px;
+			}
+			@include adaptive(767) {
+				font-size: 50px;
+			}
+			@include adaptive(575) {
+				font-size: 40px;
+			}
+		}
+
+		> h2 {
+			padding-top: 20px;
+			padding-bottom: 30px;
+			@extend %fontBigCaslon;
+			font-size: 48px;
+			@include adaptive(767) {
+				font-size: 42px;
+			}
+			@include adaptive(575) {
+				font-size: 36px;
+			}
+		}
+
+		> p {
+			padding-bottom: 30px;
+			font-size: 18px;
+			font-weight: 300;
+			color: #002a36;
+		}
+
+		> span {
+			display: block;
+			padding-left: 15px;
+			padding-bottom: 25px;
+			font-weight: 300;
+			font-size: 18px;
+			color: #002A36;
+			line-height: 28px;
+
+			&:before {
+				content: '';
+				position: relative;
+				left: -15px;
+				display: inline-block;
+				vertical-align: middle;
+				width: 15px;
+				height: 1px;
+				background-color: #002A36;
+			}
+		}
+	}
+
+	&__image {
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: calc(100% + 323px);
+		@include adaptive(1023) {
+			position: static;
+			height: 100%;
+		}
+		@include adaptive(767) {
+			margin-left: -15px;
+			width: calc(100% + 30px);
+		}
+
+		img {
+			@extend %imageResCoverAbs;
+			@include adaptive(1023) {
+				position: static;
+			}
+		}
+
+		&-wrapper {
+			position: relative;
+			width: 100%;
+			height: 535px;
+			@include adaptive(1023) {
+				height: auto;
+			}
+		}
+	}
+
+	&__other {
+		padding-top: 100px;
+
+		&-title {
+			padding-bottom: 22px;
+			font-weight: 700;
+			font-size: 17px;
+			color: #002A36;
+		}
+
+		&-box {
+			display: flex;
+			flex-direction: column;
+
+			> div {
+				width: 100%;
+				padding-bottom: 55px;
+
+				&:last-of-type {
+					padding-bottom: 0;
+				}
+			}
+		}
+
+		.card {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			background-color: transparent;
+			border: none;
+			border-radius: 0;
+			box-shadow: none;
+			@include transition(transform 0.75s);
+			@include adaptive(424) {
+				flex-direction: column;
+			}
+
+			&:hover {
+				transform: translateY(-20px);
+				@include transition(transform 0.5s);
+
+				.card__image {
+					img {
+						transform: scale(1.1);
+						@include transition(transform 0.5s);
+					}
+				}
+			}
+
+			&__image {
+				overflow: hidden;
+				position: relative;
+				width: 183px;
+				height: 183px;
+				@include adaptive(424) {
+					width: 100%;
+				}
+
+				img {
+					border-radius: 0;
+					@extend %imageResCoverAbs;
+					@include transition(transform 0.75s);
+				}
+			}
+
+			&-body {
+				flex: 1;
+				min-width: 1px;
+				max-width: 100%;
+				width: auto;
+				padding: 0;
+				padding-left: 40px;
+				@include adaptive(424) {
+					padding-left: 0;
+					padding-top: 26px;
+				}
+			}
+
+			&-title {
+				padding-bottom: 10px;
+				margin: 0;
+				@extend %fontBigCaslon;
+				font-size: 33px;
+				color: #002A36;
+				@include adaptive(1279) {
+					font-size: 30px;
+				}
+				@include adaptive(1023) {
+					font-size: 27px;
+				}
+				@include adaptive(767) {
+					font-size: 23px;
+				}
+				@include adaptive(575) {
+					font-size: 21px;
+				}
+				@include adaptive(374) {
+					font-size: 18px;
+				}
+			}
+
+			&-info {
+				padding-left: 15px;
+				font-weight: 300;
+				font-size: 18px;
+				color: #002A36;
+				line-height: 28px;
+
+				&:before {
+					content: '';
+					position: relative;
+					left: -15px;
+					display: inline-block;
+					vertical-align: middle;
+					width: 15px;
+					height: 1px;
+					background-color: #002A36;
+				}
+			}
+		}
+	}
+}
+
+// SECTION specification :: END

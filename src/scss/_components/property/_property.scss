@@ -159,6 +159,9 @@
 			img {
 				@extend %imageResCoverAbs;
 				@include transition(transform 0.75s);
+				@include adaptive(767) {
+					max-width: unset;
+				}
 			}
 		}
 
