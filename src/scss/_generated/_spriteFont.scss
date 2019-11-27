@@ -33,26 +33,29 @@
 	@if $filename == arrow {
 		$char: "\E002";
 	}
-	@if $filename == careers {
+	@if $filename == blog {
 		$char: "\E003";
 	}
-	@if $filename == checked {
+	@if $filename == careers {
 		$char: "\E004";
 	}
-	@if $filename == contact {
+	@if $filename == checked {
 		$char: "\E005";
 	}
-	@if $filename == facebook {
+	@if $filename == contact {
 		$char: "\E006";
 	}
-	@if $filename == instagram {
+	@if $filename == facebook {
 		$char: "\E007";
 	}
-	@if $filename == mac {
+	@if $filename == instagram {
 		$char: "\E008";
 	}
-	@if $filename == phone {
+	@if $filename == mac {
 		$char: "\E009";
+	}
+	@if $filename == phone {
+		$char: "\E00A";
 	}
 
 	@return $char;
@@ -75,6 +78,10 @@
 }
 .icon-arrow {
 	@include icon(arrow);
+
+}
+.icon-blog {
+	@include icon(blog);
 
 }
 .icon-careers {

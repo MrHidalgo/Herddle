@@ -1,110 +1,120 @@
 // HEADER :: START
 
-header#header.header(class!= (headerMod)?'header--dark':'')
-  .header__grid
-    .header__wrapper
-      .header__wrapper-left
+header#header.header(class!= (headerMod) ? 'header--dark' : '')
+	.header__grid
+		.header__wrapper
+			.header__wrapper-left
 
-        .logo.logo--header
-          a.logo__link(href='/' title='')
-            if(headerMod)
-              img.logo__img(src='img/logo-white.png' srcset='img/logo-white@2x.png 2x')
-            else
-              img.logo__img(src='img/logo-dark.png' srcset='img/logo-dark@2x.png 2x')
+				.logo.logo--header
+					a.logo__link(href='/' title='')
+						if(headerMod)
+							img.logo__img(src='img/logo-white.png' srcset='img/logo-white@2x.png 2x')
+						else
+							img.logo__img(src='img/logo-dark.png' srcset='img/logo-dark@2x.png 2x')
 
-        .header__wrapper-cover
+				.header__wrapper-cover
 
-          .c-btn__wrapperInline
-            a.header__btn.header__btn--get.c-btn.c-btn--bg.c-btn--bg--irisBlue.c-btn--small(href='#' title='')
-              span Get Started
+					.c-btn__wrapperInline
+						a.header__btn.header__btn--get.c-btn.c-btn--bg.c-btn--bg--irisBlue.c-btn--small(href='#' title='')
+							span Get Started
 
-          .header__wrapper-menu
-            +hamburger()
+					.header__wrapper-menu
+						+hamburger()
 
-      .header__wrapper-mobile(mobile-block-js)
-        .header__wrapper-mobile-cover
-          div
+			.header__wrapper-mobile(mobile-block-js)
+				.header__wrapper-mobile-cover
+					div
 
-            ul.header__nav.header__nav-1
-              li.header__nav-item
-                a.header__nav-link(href='#' title='') Private Landlords
-              li.header__nav-item
-                a.header__nav-link(href='#' title='') Institutional Investors
-              li.header__nav-item.header__nav-item--drop
-                .dropdown
-                  a#otherSolutionDrop.header__nav-link.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                    | Other solutions
-                  .dropdown-menu.animate.slideIn(aria-labelledby='otherSolutionDrop')
-                    a.dropdown-item(href='#') Letting & Property Management
-                    a.dropdown-item(href='#') Block Management
-                    a.dropdown-item(href='#') Social Housing Providers
-                    a.dropdown-item(href='#') Residents
-                    a.dropdown-item(href='#') Contractors
+						ul.header__nav.header__nav-1
+							li.header__nav-item
+								a.header__nav-link(href='#' title='') Private Landlords
+							li.header__nav-item
+								a.header__nav-link(href='#' title='') Institutional Investors
+							li.header__nav-item.header__nav-item--drop
+								.dropdown
+									a#otherSolutionDrop.header__nav-link.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+										| Other solutions
+									.dropdown-menu.animate.slideIn(aria-labelledby='otherSolutionDrop')
+										a.dropdown-item(href='#') Letting & Property Management
+										a.dropdown-item(href='#') Block Management
+										a.dropdown-item(href='#') Social Housing Providers
+										a.dropdown-item(href='#') Residents
+										a.dropdown-item(href='#') Contractors
 
-            .header__link-wrapper.header__link-wrapper-1
-              a.header__link(href='#' title='')
-                span Private Landlords
-              a.header__link(href='#' title='')
-                span Institutional Investors
-              a.header__link(href='#' title='')
-                span Letting & Property Management
-              a.header__link(href='#' title='')
-                span Block Management
-              a.header__link(href='#' title='')
-                span Social Housing Providers
-              a.header__link(href='#' title='')
-                span Residents
-              a.header__link(href='#' title='')
-                span Contractors
+						.header__link-wrapper.header__link-wrapper-1
+							a.header__link(href='#' title='')
+								span Private Landlords
+							a.header__link(href='#' title='')
+								span Institutional Investors
+							a.header__link(href='#' title='')
+								span Letting & Property Management
+							a.header__link(href='#' title='')
+								span Block Management
+							a.header__link(href='#' title='')
+								span Social Housing Providers
+							a.header__link(href='#' title='')
+								span Residents
+							a.header__link(href='#' title='')
+								span Contractors
 
-            .header__link-wrapper.header__link-wrapper-2
-              a.header__link(href='#' title='')
-                div
-                  img(src='img/about.svg')
-                div
-                  span About
-              a.header__link(href='#' title='')
-                div
-                  i.icon-font.icon-careers
-                div
-                  span Careers
-              a.header__link(href='#' title='')
-                div
-                  i.icon-font.icon-contact
-                div
-                  span Contact
+						.header__link-wrapper.header__link-wrapper-2
+							a.header__link(href='#' title='')
+								div
+									img(src='img/about.svg')
+								div
+									span About
+							a.header__link(href='#' title='')
+								div
+									i.icon-font.icon-careers
+								div
+									span Careers
+							a.header__link(href='#' title='')
+								div
+									i.icon-font.icon-contact
+								div
+									span Contact
+							a.dropdown-item(href='#' title='')
+								div
+									i.icon-font.icon-blog
+								div
+									span Blog
 
-          div
+					div
 
-            ul.header__nav.header__nav-2
-              li.header__nav-item.header__nav-item--drop
-                .dropdown
-                  a#companyDrop.header__nav-link.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                    | Company
-                  .dropdown-menu.animate.slideIn(aria-labelledby='companyDrop')
-                    a.dropdown-item(href='#' title='')
-                      div
-                        img(src='img/about.svg')
-                      div
-                        span About
-                    a.dropdown-item(href='#' title='')
-                      div
-                        i.icon-font.icon-careers
-                      div
-                        span Careers
-                    a.dropdown-item(href='#' title='')
-                      div
-                        i.icon-font.icon-contact
-                      div
-                        span Contact
+						ul.header__nav.header__nav-2
+							li.header__nav-item.header__nav-item--drop
+								.dropdown
+									a#companyDrop.header__nav-link.dropdown-toggle(data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+										| Company
+									.dropdown-menu.animate.slideIn(aria-labelledby='companyDrop')
+										a.dropdown-item(href='#' title='')
+											div
+												img(src='img/about.svg')
+											div
+												span About
+										a.dropdown-item(href='#' title='')
+											div
+												i.icon-font.icon-careers
+											div
+												span Careers
+										a.dropdown-item(href='#' title='')
+											div
+												i.icon-font.icon-contact
+											div
+												span Contact
+										a.dropdown-item(href='#' title='')
+											div
+												i.icon-font.icon-blog
+											div
+												span Blog
 
-            .header__btn-wrapper
-              .c-btn__wrapperInline
-                a.header__btn.header__btn--login.c-btn.c-btn--bg.c-btn--bg--blackPearl.c-btn--small(href='#' title='')
-                  span Log In
+						.header__btn-wrapper
+							.c-btn__wrapperInline
+								a.header__btn.header__btn--login.c-btn.c-btn--bg.c-btn--bg--blackPearl.c-btn--small(href='#' title='')
+									span Log In
 
-              .c-btn__wrapperInline
-                a.header__btn.header__btn--get.c-btn.c-btn--bg.c-btn--bg--irisBlue.c-btn--small(href='#' title='')
-                  span Get Started
+							.c-btn__wrapperInline
+								a.header__btn.header__btn--get.c-btn.c-btn--bg.c-btn--bg--irisBlue.c-btn--small(href='#' title='')
+									span Get Started
 
 // HEADER :: END

@@ -164,7 +164,10 @@
       flex: 1;
       min-width: 1px;
       max-width: 100%;
-      padding-left: 60px;
+      padding-left: 90px;
+			@include adaptive(1365) {
+				padding-left: 60px;
+			}
       @include adaptive(1279) {
         display: none;
         overflow-y: auto;
@@ -279,10 +282,7 @@
 
     .dropdown {
       &.show {
-       .dropdown-toggle {
-         //color: rgba(#242424, 0.51);
-         //@include transition(color);
-       }
+       .dropdown-toggle {}
       }
 
       &-toggle {
@@ -358,6 +358,10 @@
             }
             &-contact {
               font-size: 20px;
+            }
+            &-blog {
+              font-size: 18px;
+							color: rgba(#fff, 0.75) !important;
             }
           }
         }
